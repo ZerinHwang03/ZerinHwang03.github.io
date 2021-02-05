@@ -47,6 +47,80 @@
       </tags>
   </entry>
   <entry>
+    <title>Coarse-to-Fine Image Inpainting via Region-Wise Convolutions and Non-Local Correlation</title>
+    <url>/2020/03/27/Coarse-to-Fine/</url>
+    <content><![CDATA[<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>“Existing methods usually adopted the standard convolutional architecture over the corrupted image, where <strong>the same convolution filters</strong> try to <strong>restore the diverse information</strong> on both existing and missing regions, and meanwhile <strong>ignore the long-distance correlation</strong> among the regions.”</p>
+<p>“<strong>Only relying on the surrounding areas</strong> inevitably leads to <strong>meaningless contents and artifacts</strong>, such as color discrepancy and blur.”</p>
+<blockquote>
+<p>莫不是和CSA一样的出发点：不能够仅仅关注于surrounding areas</p>
+</blockquote>
+<p>“We first propose <strong>region-wise convolutions</strong> to <strong>locally</strong> deal with the different types of regions, which can help <strong>exactly reconstruct existing regions and roughly infer the missing ones</strong> from existing regions at the same time.”</p>
+<p>“Then, a <strong>non-local operation</strong> is introduced to <strong>globally</strong> model the correlation among different regions, promising <strong>visual consistency</strong> between missing and existing regions.”</p>
+<blockquote>
+<p>采用的是先Local后Global的策略。Local是为了预测和重建，而Global是为了保持一致性</p>
+</blockquote>
+<p>局部=&gt;关注细节，但是缺乏对整体的把握，这也是为什么会在hole regions和known regions之间存在边界处不连续的原因=&gt;关注的太局部</p>
+<p>全局=&gt;对整体语义的把握更有优势，但是缺乏了对细节的掌握</p>
+<a id="more"></a>
+
+<h3 id="Outline"><a href="#Outline" class="headerlink" title="Outline"></a>Outline</h3><p>step1:</p>
+<p>从已知区域中推测出丢失区域的信息=&gt;local</p>
+<p>step2:</p>
+<p>non-local operation=&gt;保证了整体的一致性，视觉上的连续性，丢失区域和已知区域边界处的连续性</p>
+<p>step3:</p>
+<p>（region-wise convolution）Local+（non-local operation）Global=&gt;Coarse-to-Fine</p>
+<p>“In this paper, to generate desirable contents for missing regions, we treat the <strong>different types of regions using different convolution filters.</strong> <strong>Existing regions</strong> contain sufficient information and thus can be reconstructed based on themselves, while the <strong>missing ones</strong> without any information have to be <strong>inferred from the existing regions.</strong>“</p>
+<p>“Therefore, we develop <strong>region-wise convolution operations</strong>, i.e., self-reconstruction and restoring from the existing regions, to <strong>separately deal with existing and missing regions.</strong>“</p>
+<p>“The <strong>region-wise convolutions</strong> help <strong>infer the missing semantic contents</strong>, but inevitably cause the <strong>inconsistent appearance</strong> due to the <strong>ignorance of the correlation between existing and missing regions.</strong> We further propose a <strong>non-local operation to model the correlation among regions</strong>, thus generate more meaningful contents to connect them naturally.”</p>
+<blockquote>
+<p>使用region-wise conv来根据existing regions推测生成missing regions的结果，但是仅仅依赖于region-wise conv只能关注到local信息，会忽略全局的一致性以及known regions和missing regions之间的相关性，所以为了解决这个问题，使用non-local来建立known regions和missing regions之间的相关性。</p>
+</blockquote>
+<p>==<strong>还是原来的想法，可以考虑如何从CoarseNet入手，以减轻RefineNet的负担</strong>==</p>
+<p><strong>==还有就是关于two-branch，虽然两个branch做的事情是不一样的，但是在输入以及branch的设计上并没有太多显式的引导，比如region-wise conv这样根据known regions和missing regions来使用不同的Conv以完成不同的任务==</strong></p>
+<hr>
+<h3 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h3><h4 id="Encoder-Decoder"><a href="#Encoder-Decoder" class="headerlink" title="Encoder-Decoder"></a><strong>Encoder-Decoder</strong></h4><p>“To accomplish this goal, network E1, E2 serve as encoders in two stages respectively to <strong>extract semantic features</strong> from corresponding input images. “</p>
+<p>“A decoder G composing of the proposed <strong>region-wised convolutional layers</strong> is employed after encoder E1 to <strong>restore the semantic contents for different regions</strong>, and <strong>generates the predicted image</strong> at the coarse stage.”</p>
+<blockquote>
+<p>实际上这个region-wised conv的目的也就很明了了：一个conv对于known regions，用于存储已知信息；而另一个conv对应missing regions，用于不根据contextual information来生成预测的结果。因此这种方式会需要CoarseNet和RefineNet，CoarseNet用于生成texture information，而RefineNet用于两个区域feature map之间相关性的保持。同时如果完全不依赖contextual information，这样生成的内容会严重缺乏与周围的一致性；同时还可以对两个conv生成的feature map进行一定的联动和结合，比如用一个loss来保持预测出来的feature的realistic。</p>
+<p>所以这个region-wise的思路其实是很好的，只不过应该要有更聪明的处理方式。</p>
+<p>这种region-wise的思想可以用在two-branch中，而且二者的motivation是一致的，都是为了针对region的不同来完成不一样的工作。</p>
+</blockquote>
+<h4 id="Inferring-Region-wise-Contents"><a href="#Inferring-Region-wise-Contents" class="headerlink" title="Inferring Region-wise Contents"></a>Inferring Region-wise Contents</h4><blockquote>
+<p><strong>CAAG的新思路</strong></p>
+<p>关于这部分，其实和two-branch的motivation很相似，而且在处理上也很相似，都是想把hallucination和attend操作分开来。实际上完全可以把Region-wise conv中的mask替换成gate。</p>
+<p><strong>==关于Multi-scale部分，其实可以考虑Res2Net的方式==</strong></p>
+<p>可以好好考虑一下这个Res2Net Block应该加在哪里，比如decoder的two-branch中？</p>
+</blockquote>
+<p>“Only relying on the same convolution filters, we can <strong>hardly restore the semantic features over different regions</strong>, which in practice usually <strong>leads to the visual artifacts</strong> such as color discrepancy, blur and obvious edge responses surrounding the missing regions.”</p>
+<p>“Motivated by this observation, we first propose region-wise convolutions in the decoder network G at the coarse stage, and thus the decoder can <strong>separately generate the corresponding contents for different regions using different convolution filters.</strong>“</p>
+<blockquote>
+<p>根据不同的region提供不同的支持</p>
+</blockquote>
+<p>“In practice, we can accomplish region-wise convolutions by proportionally resizing the mask as feature maps down-sampled through the convolution layers. In this way, we can ensure that different regions <strong>can be easily distinguished</strong> according to the resized mask <strong>by channels</strong>, and thus the information in different regions can be transmitted consistently across layers.”</p>
+<blockquote>
+<p>在channel上划分出两个region对应的feature。实际上就是concat操作…</p>
+</blockquote>
+<h4 id="Modelling-Non-local-Correlation"><a href="#Modelling-Non-local-Correlation" class="headerlink" title="Modelling Non-local Correlation"></a><strong>Modelling Non-local Correlation</strong></h4><p>就是self-attention…</p>
+<h3 id="Loss-Functions"><a href="#Loss-Functions" class="headerlink" title="Loss Functions"></a>Loss Functions</h3><p><strong>1.reconstruction loss</strong></p>
+<p>将existing regions和missing regions区分开，分别给予考虑</p>
+<p><strong>==2.correlation loss==</strong></p>
+<p><strong>对correlation进行考虑，也就是说，对于attention map进行考虑，用于指导应该从哪里借特征</strong></p>
+<p>“The reconstruction loss treats all pixels independently without consideration of their correlation, while in our observation the <strong>relationship among distant local patches</strong> plays a critical role in <strong>keeping the semantic and visual consistency</strong> between the generated missing regions and the existing ones. Therefore, we further introduce a <strong>correlation loss</strong> that can help to <strong>determine the expected non-local operation.</strong>“</p>
+<p>“The correlation loss forces the model to generate images with <strong>semantic details much more close to the realistic image.</strong>“</p>
+<p>“Here, different from the prior work of PConv, we only consider the non-local correlation for the composited image.”</p>
+<p><strong>3.style loss</strong></p>
+<p>“Although non-local correlation loss is capable of <strong>capturing long distance dependencies, enhancing the restoration of details</strong>, it still <strong>fails to avoid visual artifacts in unstable generative models.</strong>“</p>
+<p>“Therefore, we append a style loss to <strong>produce clean results</strong> and **further refine the images **perceptually as a whole at the second stage.”</p>
+<p>“The style loss <strong>focuses on</strong> the <strong>relationship between different channels</strong> to transfer the style for the composited image at the second stage.”</p>
+]]></content>
+      <categories>
+        <category>Papers</category>
+      </categories>
+      <tags>
+        <tag>Inpainting</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CISI-net:Explicit Latent Content Inference and Imitated Style Rendering for Image Inpainting</title>
     <url>/2020/10/24/CISI/</url>
     <content><![CDATA[<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>基于neural patch（contextual attention等attention方法）的方法不太合理之处在于：might introduce undesired content change in the predicted region, especially when the desired content does not exist in the known region.</p>
@@ -134,93 +208,6 @@
 <p><strong>Style encoder (SE).</strong> 由于style feature是一个global effect，关于如何对inferred的content进行renderring。因此他应该能够从同一张image中无论被什么样的masks进行污染中得到相同的features，也就是对于masks不敏感。</p>
 <p><strong>Decoder.</strong> 受启发于style transform利用affine transformation parameters于norm layers中来表示style，这里采用Adative Instance Norm layer于residual blocks来调整generated images中的style。</p>
 <p><strong>Discriminator.</strong> 这里采用的LSGAN以及multi-scale discriminator来引导生成realistic details和correct global structure。</p>
-]]></content>
-      <categories>
-        <category>Papers</category>
-      </categories>
-      <tags>
-        <tag>Inpainting</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Coarse-to-Fine Image Inpainting via Region-Wise Convolutions and Non-Local Correlation</title>
-    <url>/2020/03/27/Coarse-to-Fine/</url>
-    <content><![CDATA[<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>“Existing methods usually adopted the standard convolutional architecture over the corrupted image, where <strong>the same convolution filters</strong> try to <strong>restore the diverse information</strong> on both existing and missing regions, and meanwhile <strong>ignore the long-distance correlation</strong> among the regions.”</p>
-<p>“<strong>Only relying on the surrounding areas</strong> inevitably leads to <strong>meaningless contents and artifacts</strong>, such as color discrepancy and blur.”</p>
-<blockquote>
-<p>莫不是和CSA一样的出发点：不能够仅仅关注于surrounding areas</p>
-</blockquote>
-<p>“We first propose <strong>region-wise convolutions</strong> to <strong>locally</strong> deal with the different types of regions, which can help <strong>exactly reconstruct existing regions and roughly infer the missing ones</strong> from existing regions at the same time.”</p>
-<p>“Then, a <strong>non-local operation</strong> is introduced to <strong>globally</strong> model the correlation among different regions, promising <strong>visual consistency</strong> between missing and existing regions.”</p>
-<blockquote>
-<p>采用的是先Local后Global的策略。Local是为了预测和重建，而Global是为了保持一致性</p>
-</blockquote>
-<p>局部=&gt;关注细节，但是缺乏对整体的把握，这也是为什么会在hole regions和known regions之间存在边界处不连续的原因=&gt;关注的太局部</p>
-<p>全局=&gt;对整体语义的把握更有优势，但是缺乏了对细节的掌握</p>
-<a id="more"></a>
-
-<h3 id="Outline"><a href="#Outline" class="headerlink" title="Outline"></a>Outline</h3><p>step1:</p>
-<p>从已知区域中推测出丢失区域的信息=&gt;local</p>
-<p>step2:</p>
-<p>non-local operation=&gt;保证了整体的一致性，视觉上的连续性，丢失区域和已知区域边界处的连续性</p>
-<p>step3:</p>
-<p>（region-wise convolution）Local+（non-local operation）Global=&gt;Coarse-to-Fine</p>
-<p>“In this paper, to generate desirable contents for missing regions, we treat the <strong>different types of regions using different convolution filters.</strong> <strong>Existing regions</strong> contain sufficient information and thus can be reconstructed based on themselves, while the <strong>missing ones</strong> without any information have to be <strong>inferred from the existing regions.</strong>“</p>
-<p>“Therefore, we develop <strong>region-wise convolution operations</strong>, i.e., self-reconstruction and restoring from the existing regions, to <strong>separately deal with existing and missing regions.</strong>“</p>
-<p>“The <strong>region-wise convolutions</strong> help <strong>infer the missing semantic contents</strong>, but inevitably cause the <strong>inconsistent appearance</strong> due to the <strong>ignorance of the correlation between existing and missing regions.</strong> We further propose a <strong>non-local operation to model the correlation among regions</strong>, thus generate more meaningful contents to connect them naturally.”</p>
-<blockquote>
-<p>使用region-wise conv来根据existing regions推测生成missing regions的结果，但是仅仅依赖于region-wise conv只能关注到local信息，会忽略全局的一致性以及known regions和missing regions之间的相关性，所以为了解决这个问题，使用non-local来建立known regions和missing regions之间的相关性。</p>
-</blockquote>
-<p>==<strong>还是原来的想法，可以考虑如何从CoarseNet入手，以减轻RefineNet的负担</strong>==</p>
-<p><strong>==还有就是关于two-branch，虽然两个branch做的事情是不一样的，但是在输入以及branch的设计上并没有太多显式的引导，比如region-wise conv这样根据known regions和missing regions来使用不同的Conv以完成不同的任务==</strong></p>
-<hr>
-<h3 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h3><h4 id="Encoder-Decoder"><a href="#Encoder-Decoder" class="headerlink" title="Encoder-Decoder"></a><strong>Encoder-Decoder</strong></h4><p>“To accomplish this goal, network E1, E2 serve as encoders in two stages respectively to <strong>extract semantic features</strong> from corresponding input images. “</p>
-<p>“A decoder G composing of the proposed <strong>region-wised convolutional layers</strong> is employed after encoder E1 to <strong>restore the semantic contents for different regions</strong>, and <strong>generates the predicted image</strong> at the coarse stage.”</p>
-<blockquote>
-<p>实际上这个region-wised conv的目的也就很明了了：一个conv对于known regions，用于存储已知信息；而另一个conv对应missing regions，用于不根据contextual information来生成预测的结果。因此这种方式会需要CoarseNet和RefineNet，CoarseNet用于生成texture information，而RefineNet用于两个区域feature map之间相关性的保持。同时如果完全不依赖contextual information，这样生成的内容会严重缺乏与周围的一致性；同时还可以对两个conv生成的feature map进行一定的联动和结合，比如用一个loss来保持预测出来的feature的realistic。</p>
-<p>所以这个region-wise的思路其实是很好的，只不过应该要有更聪明的处理方式。</p>
-<p>这种region-wise的思想可以用在two-branch中，而且二者的motivation是一致的，都是为了针对region的不同来完成不一样的工作。</p>
-</blockquote>
-<h4 id="Inferring-Region-wise-Contents"><a href="#Inferring-Region-wise-Contents" class="headerlink" title="Inferring Region-wise Contents"></a>Inferring Region-wise Contents</h4><blockquote>
-<p><strong>CAAG的新思路</strong></p>
-<p>关于这部分，其实和two-branch的motivation很相似，而且在处理上也很相似，都是想把hallucination和attend操作分开来。实际上完全可以把Region-wise conv中的mask替换成gate。</p>
-<p><strong>==关于Multi-scale部分，其实可以考虑Res2Net的方式==</strong></p>
-<p>可以好好考虑一下这个Res2Net Block应该加在哪里，比如decoder的two-branch中？</p>
-</blockquote>
-<p>“Only relying on the same convolution filters, we can <strong>hardly restore the semantic features over different regions</strong>, which in practice usually <strong>leads to the visual artifacts</strong> such as color discrepancy, blur and obvious edge responses surrounding the missing regions.”</p>
-<p>“Motivated by this observation, we first propose region-wise convolutions in the decoder network G at the coarse stage, and thus the decoder can <strong>separately generate the corresponding contents for different regions using different convolution filters.</strong>“</p>
-<blockquote>
-<p>根据不同的region提供不同的支持</p>
-</blockquote>
-<p>“In practice, we can accomplish region-wise convolutions by proportionally resizing the mask as feature maps down-sampled through the convolution layers. In this way, we can ensure that different regions <strong>can be easily distinguished</strong> according to the resized mask <strong>by channels</strong>, and thus the information in different regions can be transmitted consistently across layers.”</p>
-<blockquote>
-<p>在channel上划分出两个region对应的feature。实际上就是concat操作…</p>
-</blockquote>
-<h4 id="Modelling-Non-local-Correlation"><a href="#Modelling-Non-local-Correlation" class="headerlink" title="Modelling Non-local Correlation"></a><strong>Modelling Non-local Correlation</strong></h4><p>就是self-attention…</p>
-<h3 id="Loss-Functions"><a href="#Loss-Functions" class="headerlink" title="Loss Functions"></a>Loss Functions</h3><p><strong>1.reconstruction loss</strong></p>
-<p>将existing regions和missing regions区分开，分别给予考虑</p>
-<p><strong>==2.correlation loss==</strong></p>
-<p><strong>对correlation进行考虑，也就是说，对于attention map进行考虑，用于指导应该从哪里借特征</strong></p>
-<p>“The reconstruction loss treats all pixels independently without consideration of their correlation, while in our observation the <strong>relationship among distant local patches</strong> plays a critical role in <strong>keeping the semantic and visual consistency</strong> between the generated missing regions and the existing ones. Therefore, we further introduce a <strong>correlation loss</strong> that can help to <strong>determine the expected non-local operation.</strong>“</p>
-<p>“The correlation loss forces the model to generate images with <strong>semantic details much more close to the realistic image.</strong>“</p>
-<p>“Here, different from the prior work of PConv, we only consider the non-local correlation for the composited image.”</p>
-<p><strong>3.style loss</strong></p>
-<p>“Although non-local correlation loss is capable of <strong>capturing long distance dependencies, enhancing the restoration of details</strong>, it still <strong>fails to avoid visual artifacts in unstable generative models.</strong>“</p>
-<p>“Therefore, we append a style loss to <strong>produce clean results</strong> and **further refine the images **perceptually as a whole at the second stage.”</p>
-<p>“The style loss <strong>focuses on</strong> the <strong>relationship between different channels</strong> to transfer the style for the composited image at the second stage.”</p>
-]]></content>
-      <categories>
-        <category>Papers</category>
-      </categories>
-      <tags>
-        <tag>Inpainting</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Contextual-Based Imgae Inpainting:Infer, Match, and Translate</title>
-    <url>/2020/03/21/Contextual-based-Infer-Match-Translate/</url>
-    <content><![CDATA[<p>出发点：</p>
-<p>就像之前对GAN的理解那样，实际上是为了找到一个mapping能将corrupted images转换到gt images上，然而之前的一些工作是直接找一个mapping，作者认为这样难度太大，所以将这个mapping分成了两个部分，由此简化任务的难度。将一个image translation problem划分成了两个image translation problems</p>
 ]]></content>
       <categories>
         <category>Papers</category>
@@ -363,31 +350,10 @@
       </tags>
   </entry>
   <entry>
-    <title>Deep Fusion Network for Image Completion</title>
-    <url>/2020/08/16/DeepFusionNet/</url>
-    <content><![CDATA[<h3 id="Target-Motivation"><a href="#Target-Motivation" class="headerlink" title="Target/Motivation"></a>Target/Motivation</h3><p>Existing inpainting methods usually fail to harmonically blend the restored image into existing content, especially in the boundary area.</p>
-<p>目标是解决hole内生成结果和surrounding相一致/和谐的问题。</p>
-<p>The filled region must be perceptually plausible in the transition zone with sufficiently similar texture and consistent structure.</p>
-<p> 作者认为，实现生成在边界处的平滑过渡在一些场景下比获得更加realistic的结果更为重要。因此这篇paper的重点集中在hole regions和known regions之间的过渡上。</p>
-<p>之前的工作中，有针对边缘区域的pixel gradient进行优化的方法。对于融合质量的评价，通过判断两个图像梯度变化的一致性来判断。由此引申到restored content和known region之间连续性的保持上。</p>
-<p>Patrick et al. proposed a method to iteratively optimize the pixel gradient in edge transitional region. Given two images, the fusion quality depends on the consistency of the gradient changes of these two images, which is similar with the relationship between the restored content and the known region in image completion.</p>
-<a id="more"></a>
-
-<h3 id="Related-works"><a href="#Related-works" class="headerlink" title="Related works"></a>Related works</h3><p>分为两派：（1）Contextual Attention派：认为应该从background中借来信息以填充hole regions；（2）EdgeConnect派：认为structure和texture更为重要，或者说认为structure consistency更为重要。这些方法中，例如edge之类的信息通常被用来保证structure的一致性。</p>
-<h3 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h3><p>Existing inpainting methods usually fail to harmonically blend the restored image into existing content, especially in the boundary area.</p>
-<p>Existing training strategies has problems. （1）the mission of image completion is to complete the unknown region only. It is actually hard to complete missing hole while keeping a strict identity mapping for known area. 对于image inpainting任务而言，重要的是reason、predict出hole regions中的content，但是如果同时需要对于known regions中的content完全恢复，即完成严格的恒等变换，是很困难的任务。（2）the inconsistent use of $I_{comp}$ and $I_{out}$ during training and testing, along with the rigid composition method, usually produces visible artifacts around the boundary of missing area.现有的一些方法中，在known regions部分，使用的是gt image，仅用于测试，而在训练过程中仅仅是利用reconstructed部分。因此这种训练、测试方式的不统一会导致生成结果在known regions和hole regions的交界处的不一致，从而产生artifacts。</p>
-<p>从第一点和第二点中可以看到问题所在：如果在训练中使用gt的known regions，那么就会存在第一点的问题：很难同时学到恒等变换和predict的能力；如果在训练过程中，使用的是reconstructed的known regions，那么就会存在第二点问题：因为在测试的时候需要使用gt的known-region content，就会在边界的地方产生不和谐，artifacts。</p>
-<p>这篇文章中从第二点出发，即train和test的时候，known regions中使用的是reconstructed contents，从而避免网络去学习不必要的恒等变换，同时去解决这种训练方式下，可能在测试过程中带来的boundary中存在artifacts的问题。</p>
-<blockquote>
-<p>这篇文章应该是从第二点出发，即train和test的时候，known regions中使用的是reconstructed contents。但是从第一点出发，是不是有一个pretrained的AutoEncoder会好很多？之前有一篇文章。</p>
-</blockquote>
-<h3 id="Approaches"><a href="#Approaches" class="headerlink" title="Approaches"></a>Approaches</h3><p>架构上，采用的UNet架构，同时对于decider的每一层，都使用一个fusion block。对于每一个layer中的fusion block，输入为原始corrupted图像$I_{in}$以及对应decoder输出的feature map $F$。以第$k$层为例，decoder的feature map为$F_k$，且corruted input image被resize到对应的分辨率，为$I_k$。对于$F_k$，将其通过变化$M$变换到RGB image，为$C_k$，并生成alpha map，来替代原先方法中的mask，实现smooth的known regions和hole regions的过渡。即对于第$k$层的输出image，为$I^{comp}_{k}=\alpha_k\odot M(F_k)+(1-\alpha_k) \odot I_k)=\alpha_k\odot C_k+(1-\alpha_k) \odot I_k)$。其中，$\alpha_k=A(I_k,F_k)$。</p>
-<p>对于$A(\cdot)$采用的是stacked convs with kernel size =1, 3, 1，并且使用batch normalization和leakyrelu。 </p>
-<p>The fusion block enables network to avoid learning unnecessary identity mapping while completing unknown region with soft transition near the boundary.</p>
-<p>避免由于学习known regions处的features导致学习identity mapping，从而导致reason/predict能力减弱。并且对于boundary处的过渡更加平滑。</p>
-<p>在训练过程中，使用的是$I^{comp}_k$，用于计算每一层的reconstruction loss；在测试时，只使用最后一层的$I_0$。所以这里在测试和训练都不涉及使用gt image的known-region部分，从而避免了需要model同时具有恒等变换的能力。</p>
-<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>提出了一个learnble fusion block，在pixel level完成known regions和hole regions之间的一致性的保持。并且生成一个alpha map，和mask类似，但是比mask有着更smooth的weights，尤其是在boundary处。这个alpha map在gradient descent optimization的过程中，不断地调整gt和restored image之间的balance，从而使得交界处更加smooth。也就是说，实际上这里不再是$(1-mask)gt_image + mask\cdot restored_image$的形式，而是通过一个alpha map来取代这里合成最终结果的mask的作用。这里的alpha map在边界处更加平滑，从而避免了过渡区域的不合理和突变。</p>
-<p>核心的模块是fusion block。不仅完成关于known-region和hole-region features平滑的融合，同时还使用attention机制，将known regions的features转移到hole regions中；并且这个fusion block被嵌入在网络decoder的每一层。除此之外，充分利用不同layer的feature的性质，对不同layer使用structure loss和texture loss。</p>
+    <title>Contextual-Based Imgae Inpainting:Infer, Match, and Translate</title>
+    <url>/2020/03/21/Contextual-based-Infer-Match-Translate/</url>
+    <content><![CDATA[<p>出发点：</p>
+<p>就像之前对GAN的理解那样，实际上是为了找到一个mapping能将corrupted images转换到gt images上，然而之前的一些工作是直接找一个mapping，作者认为这样难度太大，所以将这个mapping分成了两个部分，由此简化任务的难度。将一个image translation problem划分成了两个image translation problems</p>
 ]]></content>
       <categories>
         <category>Papers</category>
@@ -433,6 +399,64 @@
       </categories>
       <tags>
         <tag>Inpainting</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Deep Fusion Network for Image Completion</title>
+    <url>/2020/08/16/DeepFusionNet/</url>
+    <content><![CDATA[<h3 id="Target-Motivation"><a href="#Target-Motivation" class="headerlink" title="Target/Motivation"></a>Target/Motivation</h3><p>Existing inpainting methods usually fail to harmonically blend the restored image into existing content, especially in the boundary area.</p>
+<p>目标是解决hole内生成结果和surrounding相一致/和谐的问题。</p>
+<p>The filled region must be perceptually plausible in the transition zone with sufficiently similar texture and consistent structure.</p>
+<p> 作者认为，实现生成在边界处的平滑过渡在一些场景下比获得更加realistic的结果更为重要。因此这篇paper的重点集中在hole regions和known regions之间的过渡上。</p>
+<p>之前的工作中，有针对边缘区域的pixel gradient进行优化的方法。对于融合质量的评价，通过判断两个图像梯度变化的一致性来判断。由此引申到restored content和known region之间连续性的保持上。</p>
+<p>Patrick et al. proposed a method to iteratively optimize the pixel gradient in edge transitional region. Given two images, the fusion quality depends on the consistency of the gradient changes of these two images, which is similar with the relationship between the restored content and the known region in image completion.</p>
+<a id="more"></a>
+
+<h3 id="Related-works"><a href="#Related-works" class="headerlink" title="Related works"></a>Related works</h3><p>分为两派：（1）Contextual Attention派：认为应该从background中借来信息以填充hole regions；（2）EdgeConnect派：认为structure和texture更为重要，或者说认为structure consistency更为重要。这些方法中，例如edge之类的信息通常被用来保证structure的一致性。</p>
+<h3 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h3><p>Existing inpainting methods usually fail to harmonically blend the restored image into existing content, especially in the boundary area.</p>
+<p>Existing training strategies has problems. （1）the mission of image completion is to complete the unknown region only. It is actually hard to complete missing hole while keeping a strict identity mapping for known area. 对于image inpainting任务而言，重要的是reason、predict出hole regions中的content，但是如果同时需要对于known regions中的content完全恢复，即完成严格的恒等变换，是很困难的任务。（2）the inconsistent use of $I_{comp}$ and $I_{out}$ during training and testing, along with the rigid composition method, usually produces visible artifacts around the boundary of missing area.现有的一些方法中，在known regions部分，使用的是gt image，仅用于测试，而在训练过程中仅仅是利用reconstructed部分。因此这种训练、测试方式的不统一会导致生成结果在known regions和hole regions的交界处的不一致，从而产生artifacts。</p>
+<p>从第一点和第二点中可以看到问题所在：如果在训练中使用gt的known regions，那么就会存在第一点的问题：很难同时学到恒等变换和predict的能力；如果在训练过程中，使用的是reconstructed的known regions，那么就会存在第二点问题：因为在测试的时候需要使用gt的known-region content，就会在边界的地方产生不和谐，artifacts。</p>
+<p>这篇文章中从第二点出发，即train和test的时候，known regions中使用的是reconstructed contents，从而避免网络去学习不必要的恒等变换，同时去解决这种训练方式下，可能在测试过程中带来的boundary中存在artifacts的问题。</p>
+<blockquote>
+<p>这篇文章应该是从第二点出发，即train和test的时候，known regions中使用的是reconstructed contents。但是从第一点出发，是不是有一个pretrained的AutoEncoder会好很多？之前有一篇文章。</p>
+</blockquote>
+<h3 id="Approaches"><a href="#Approaches" class="headerlink" title="Approaches"></a>Approaches</h3><p>架构上，采用的UNet架构，同时对于decider的每一层，都使用一个fusion block。对于每一个layer中的fusion block，输入为原始corrupted图像$I_{in}$以及对应decoder输出的feature map $F$。以第$k$层为例，decoder的feature map为$F_k$，且corruted input image被resize到对应的分辨率，为$I_k$。对于$F_k$，将其通过变化$M$变换到RGB image，为$C_k$，并生成alpha map，来替代原先方法中的mask，实现smooth的known regions和hole regions的过渡。即对于第$k$层的输出image，为$I^{comp}_{k}=\alpha_k\odot M(F_k)+(1-\alpha_k) \odot I_k)=\alpha_k\odot C_k+(1-\alpha_k) \odot I_k)$。其中，$\alpha_k=A(I_k,F_k)$。</p>
+<p>对于$A(\cdot)$采用的是stacked convs with kernel size =1, 3, 1，并且使用batch normalization和leakyrelu。 </p>
+<p>The fusion block enables network to avoid learning unnecessary identity mapping while completing unknown region with soft transition near the boundary.</p>
+<p>避免由于学习known regions处的features导致学习identity mapping，从而导致reason/predict能力减弱。并且对于boundary处的过渡更加平滑。</p>
+<p>在训练过程中，使用的是$I^{comp}_k$，用于计算每一层的reconstruction loss；在测试时，只使用最后一层的$I_0$。所以这里在测试和训练都不涉及使用gt image的known-region部分，从而避免了需要model同时具有恒等变换的能力。</p>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>提出了一个learnble fusion block，在pixel level完成known regions和hole regions之间的一致性的保持。并且生成一个alpha map，和mask类似，但是比mask有着更smooth的weights，尤其是在boundary处。这个alpha map在gradient descent optimization的过程中，不断地调整gt和restored image之间的balance，从而使得交界处更加smooth。也就是说，实际上这里不再是$(1-mask)gt_image + mask\cdot restored_image$的形式，而是通过一个alpha map来取代这里合成最终结果的mask的作用。这里的alpha map在边界处更加平滑，从而避免了过渡区域的不合理和突变。</p>
+<p>核心的模块是fusion block。不仅完成关于known-region和hole-region features平滑的融合，同时还使用attention机制，将known regions的features转移到hole regions中；并且这个fusion block被嵌入在网络decoder的每一层。除此之外，充分利用不同layer的feature的性质，对不同layer使用structure loss和texture loss。</p>
+]]></content>
+      <categories>
+        <category>Papers</category>
+      </categories>
+      <tags>
+        <tag>Inpainting</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Leetcode13.罗马数字转整数</title>
+    <url>/2020/03/05/Leetcode13/</url>
+    <content><![CDATA[<h3 id="Leetcode-13-罗马数字转整数"><a href="#Leetcode-13-罗马数字转整数" class="headerlink" title="Leetcode 13. 罗马数字转整数"></a>Leetcode <a href="https://leetcode-cn.com/problems/roman-to-integer/">13. 罗马数字转整数</a></h3><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。</p>
+<blockquote>
+<p>字符          数值<br>I             1<br>V             5<br>X             10<br>L             50<br>C             100<br>D             500<br>M             1000<br>例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。</p>
+</blockquote>
+<p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p>
+<p>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。<br>X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。<br>C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。<br>给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</p>
+<a id="more"></a>
+
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>实际上只需要判断后一个字符是否比前一个字符对应的int值更大，并且是否满足题目中所举例的六种情况（后一个字符对应的int值是前一个字符对应的int值的5倍或者10倍），就可以确定出当前字符对应的数字在最终结果计算中对应的操作符号是加法还是减法。</p>
+<p>举例说明string数据”IV”：</p>
+<p>字符’I’对应的int值为1，字符’V’对应的int值为5，满足后一个字符对应的int值为前一个字符对应的int值的5倍或者10倍的关系，则字符’I’在最终结果计算中的操作符号是负号，即对应减法。</p>
+<p>在代码实现中，利用两个数组分别按对应关系存放字符和数值，通过索引值建立二者的联系，并且对仅有一个字符的string进行特殊考虑。代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">char</span> charList[<span class="number">7</span>] = &#123;<span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27;V&#x27;</span>, <span class="string">&#x27;X&#x27;</span>, <span class="string">&#x27;L&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;M&#x27;</span>&#125;;</span><br><span class="line">  <span class="keyword">int</span> intList[<span class="number">7</span>] = &#123;<span class="number">1</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">50</span>,<span class="number">100</span>,<span class="number">500</span>,<span class="number">1000</span>&#125;;</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">     <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">     <span class="keyword">if</span>(s[<span class="number">1</span>]==<span class="string">&#x27;\0&#x27;</span>)&#123; <span class="keyword">return</span> intList[Locate(s[<span class="number">0</span>], charList)];&#125;</span><br><span class="line">     <span class="keyword">while</span>(s[index+<span class="number">1</span>]!=<span class="string">&#x27;\0&#x27;</span>)&#123;</span><br><span class="line">       <span class="keyword">if</span>(intList[Locate(s[index], charList)]*<span class="number">5</span>==intList[Locate(s[index+<span class="number">1</span>], charList)]</span><br><span class="line">       || intList[Locate(s[index], charList)]*<span class="number">10</span>==intList[Locate(s[index+<span class="number">1</span>], charList)])&#123;</span><br><span class="line">         res = res - intList[Locate(s[index], charList)]; </span><br><span class="line">       &#125;<span class="keyword">else</span> res = res + intList[Locate(s[index], charList)];</span><br><span class="line">       index++;</span><br><span class="line">     &#125;</span><br><span class="line">     res = res + intList[Locate(s[index], charList)];</span><br><span class="line">     <span class="keyword">return</span> res;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">Locate</span><span class="params">(<span class="keyword">char</span> x, <span class="keyword">char</span>* c)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Solution::Locate</span><span class="params">(<span class="keyword">char</span> x, <span class="keyword">char</span>* c)</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(c[index]==x) <span class="keyword">return</span> index;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(c[index]!=<span class="string">&#x27;\0&#x27;</span>)&#123;</span><br><span class="line">       index++;</span><br><span class="line">     &#125;<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
@@ -513,49 +537,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Leetcode13.罗马数字转整数</title>
-    <url>/2020/03/05/Leetcode13/</url>
-    <content><![CDATA[<h3 id="Leetcode-13-罗马数字转整数"><a href="#Leetcode-13-罗马数字转整数" class="headerlink" title="Leetcode 13. 罗马数字转整数"></a>Leetcode <a href="https://leetcode-cn.com/problems/roman-to-integer/">13. 罗马数字转整数</a></h3><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。</p>
-<blockquote>
-<p>字符          数值<br>I             1<br>V             5<br>X             10<br>L             50<br>C             100<br>D             500<br>M             1000<br>例如， 罗马数字 2 写做 II ，即为两个并列的 1。12 写做 XII ，即为 X + II 。 27 写做  XXVII, 即为 XX + V + II 。</p>
-</blockquote>
-<p>通常情况下，罗马数字中小的数字在大的数字的右边。但也存在特例，例如 4 不写做 IIII，而是 IV。数字 1 在数字 5 的左边，所表示的数等于大数 5 减小数 1 得到的数值 4 。同样地，数字 9 表示为 IX。这个特殊的规则只适用于以下六种情况：</p>
-<p>I 可以放在 V (5) 和 X (10) 的左边，来表示 4 和 9。<br>X 可以放在 L (50) 和 C (100) 的左边，来表示 40 和 90。<br>C 可以放在 D (500) 和 M (1000) 的左边，来表示 400 和 900。<br>给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。</p>
-<a id="more"></a>
-
-<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>实际上只需要判断后一个字符是否比前一个字符对应的int值更大，并且是否满足题目中所举例的六种情况（后一个字符对应的int值是前一个字符对应的int值的5倍或者10倍），就可以确定出当前字符对应的数字在最终结果计算中对应的操作符号是加法还是减法。</p>
-<p>举例说明string数据”IV”：</p>
-<p>字符’I’对应的int值为1，字符’V’对应的int值为5，满足后一个字符对应的int值为前一个字符对应的int值的5倍或者10倍的关系，则字符’I’在最终结果计算中的操作符号是负号，即对应减法。</p>
-<p>在代码实现中，利用两个数组分别按对应关系存放字符和数值，通过索引值建立二者的联系，并且对仅有一个字符的string进行特殊考虑。代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">char</span> charList[<span class="number">7</span>] = &#123;<span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27;V&#x27;</span>, <span class="string">&#x27;X&#x27;</span>, <span class="string">&#x27;L&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, <span class="string">&#x27;M&#x27;</span>&#125;;</span><br><span class="line">  <span class="keyword">int</span> intList[<span class="number">7</span>] = &#123;<span class="number">1</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">50</span>,<span class="number">100</span>,<span class="number">500</span>,<span class="number">1000</span>&#125;;</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">romanToInt</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">     <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">     <span class="keyword">if</span>(s[<span class="number">1</span>]==<span class="string">&#x27;\0&#x27;</span>)&#123; <span class="keyword">return</span> intList[Locate(s[<span class="number">0</span>], charList)];&#125;</span><br><span class="line">     <span class="keyword">while</span>(s[index+<span class="number">1</span>]!=<span class="string">&#x27;\0&#x27;</span>)&#123;</span><br><span class="line">       <span class="keyword">if</span>(intList[Locate(s[index], charList)]*<span class="number">5</span>==intList[Locate(s[index+<span class="number">1</span>], charList)]</span><br><span class="line">       || intList[Locate(s[index], charList)]*<span class="number">10</span>==intList[Locate(s[index+<span class="number">1</span>], charList)])&#123;</span><br><span class="line">         res = res - intList[Locate(s[index], charList)]; </span><br><span class="line">       &#125;<span class="keyword">else</span> res = res + intList[Locate(s[index], charList)];</span><br><span class="line">       index++;</span><br><span class="line">     &#125;</span><br><span class="line">     res = res + intList[Locate(s[index], charList)];</span><br><span class="line">     <span class="keyword">return</span> res;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">Locate</span><span class="params">(<span class="keyword">char</span> x, <span class="keyword">char</span>* c)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Solution::Locate</span><span class="params">(<span class="keyword">char</span> x, <span class="keyword">char</span>* c)</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(c[index]==x) <span class="keyword">return</span> index;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(c[index]!=<span class="string">&#x27;\0&#x27;</span>)&#123;</span><br><span class="line">       index++;</span><br><span class="line">     &#125;<span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LeetCode206反转链表</title>
-    <url>/2020/03/12/Leetcode206/</url>
-    <content><![CDATA[<h4 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206. 反转链表"></a><a href="https://leetcode-cn.com/problems/reverse-linked-list/">206. 反转链表</a></h4><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>反转一个单链表。</p>
-<a id="more"></a>
-
-<p><strong>示例:</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span><br><span class="line">输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</span><br></pre></td></tr></table></figure>
-<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>很简单的思路：</p>
-<p>只需要先找到链表的最后一个节点，并存储，作为反转后的链表的const head指针。整个过程只需要将原链表中的第一个节点插入原链表中最后一个节点之后即可。代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="literal">NULL</span>) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode* tail = findTail(head);</span><br><span class="line">        ListNode* cur = head;</span><br><span class="line">        <span class="keyword">while</span>(cur!=tail)&#123;</span><br><span class="line">            head = head-&gt;next;</span><br><span class="line">            insert_next(tail, cur);</span><br><span class="line">            cur=head;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> tail;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">ListNode* <span class="title">findTail</span><span class="params">(ListNode* head)</span></span>;</span><br><span class="line">    <span class="function">ListNode* <span class="title">insert_next</span><span class="params">(ListNode* head, ListNode* node)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">ListNode* <span class="title">Solution::findTail</span><span class="params">(ListNode* head)</span></span>&#123;</span><br><span class="line">        ListNode* cur=head;</span><br><span class="line">        <span class="keyword">if</span>(cur==<span class="literal">NULL</span>) <span class="keyword">return</span> head;</span><br><span class="line">        <span class="keyword">while</span>(cur-&gt;next!=<span class="literal">NULL</span>) cur=cur-&gt;next;</span><br><span class="line">        <span class="keyword">return</span> cur;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ListNode* <span class="title">Solution::insert_next</span><span class="params">(ListNode* head, ListNode* node)</span></span>&#123;</span><br><span class="line">    node-&gt;next=head-&gt;next;</span><br><span class="line">    head-&gt;next=node;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Leetcode58:最后一个单词的长度</title>
     <url>/2020/03/12/Leetcode58/</url>
     <content><![CDATA[<h3 id="58-最后一个单词的长度"><a href="#58-最后一个单词的长度" class="headerlink" title="58. 最后一个单词的长度"></a><a href="https://leetcode-cn.com/problems/length-of-last-word/">58. 最后一个单词的长度</a></h3><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>给你一个字符串 s，由若干单词组成，单词之间用空格隔开。返回字符串中最后一个单词的长度。如果不存在最后一个单词，请返回 0 。</p>
@@ -580,6 +561,25 @@
 <p>因为当遭遇连续的空格和连续的非空格字符时是需要累计单词长度的。</p>
 <p>同时考虑两个特殊情况：字符串长度分别为0和1，单独对二者进行处理即可。最终代码如下所示：</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthOfLastWord</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">&#x27;\0&#x27;</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> size = s.size(); <span class="comment">// not include &#x27;\0&#x27;</span></span><br><span class="line">        <span class="keyword">if</span>(size==<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[<span class="number">0</span>]==<span class="string">&#x27; &#x27;</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> num=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;size; i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(s[i]!=<span class="string">&#x27; &#x27;</span>) num++;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s[i]==<span class="string">&#x27; &#x27;</span> &amp;&amp; s[i+<span class="number">1</span>]!=<span class="string">&#x27; &#x27;</span> &amp;&amp; s[i+<span class="number">1</span>]!=<span class="string">&#x27;\0&#x27;</span>) num=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LeetCode206反转链表</title>
+    <url>/2020/03/12/Leetcode206/</url>
+    <content><![CDATA[<h4 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206. 反转链表"></a><a href="https://leetcode-cn.com/problems/reverse-linked-list/">206. 反转链表</a></h4><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>反转一个单链表。</p>
+<a id="more"></a>
+
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span><br><span class="line">输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</span><br></pre></td></tr></table></figure>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>很简单的思路：</p>
+<p>只需要先找到链表的最后一个节点，并存储，作为反转后的链表的const head指针。整个过程只需要将原链表中的第一个节点插入原链表中最后一个节点之后即可。代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="literal">NULL</span>) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode* tail = findTail(head);</span><br><span class="line">        ListNode* cur = head;</span><br><span class="line">        <span class="keyword">while</span>(cur!=tail)&#123;</span><br><span class="line">            head = head-&gt;next;</span><br><span class="line">            insert_next(tail, cur);</span><br><span class="line">            cur=head;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> tail;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">ListNode* <span class="title">findTail</span><span class="params">(ListNode* head)</span></span>;</span><br><span class="line">    <span class="function">ListNode* <span class="title">insert_next</span><span class="params">(ListNode* head, ListNode* node)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">ListNode* <span class="title">Solution::findTail</span><span class="params">(ListNode* head)</span></span>&#123;</span><br><span class="line">        ListNode* cur=head;</span><br><span class="line">        <span class="keyword">if</span>(cur==<span class="literal">NULL</span>) <span class="keyword">return</span> head;</span><br><span class="line">        <span class="keyword">while</span>(cur-&gt;next!=<span class="literal">NULL</span>) cur=cur-&gt;next;</span><br><span class="line">        <span class="keyword">return</span> cur;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ListNode* <span class="title">Solution::insert_next</span><span class="params">(ListNode* head, ListNode* node)</span></span>&#123;</span><br><span class="line">    node-&gt;next=head-&gt;next;</span><br><span class="line">    head-&gt;next=node;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>LeetCode</category>
