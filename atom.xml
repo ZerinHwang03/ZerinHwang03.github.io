@@ -296,4 +296,24 @@
     
   </entry>
   
+  <entry>
+    <title>About Me</title>
+    <link href="http://example.com/1997/06/08/AboutMe/"/>
+    <id>http://example.com/1997/06/08/AboutMe/</id>
+    <published>1997-06-08T12:06:08.000Z</published>
+    <updated>2021-02-05T18:45:02.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>I’m Zhilin Huang, a Master student from Peking Univerity. I received the B.S. degree from Harbin Institute of Technology, Harbin, China. My research interests include image inpainting, multimodal learning and semantic segmentation.</p><p>Contact me: <a href="mailto:&#x7a;&#x65;&#114;&#105;&#x6e;&#104;&#119;&#97;&#110;&#103;&#48;&#x33;&#x40;&#x70;&#107;&#x75;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;">&#x7a;&#x65;&#114;&#105;&#x6e;&#104;&#119;&#97;&#110;&#103;&#48;&#x33;&#x40;&#x70;&#107;&#x75;&#x2e;&#x65;&#x64;&#117;&#x2e;&#99;&#x6e;</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;I’m Zhilin Huang, a Master student from Peking Univerity. I received the B.S. degree from Harbin Institute of Technology, Harbin, China. </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
 </feed>
