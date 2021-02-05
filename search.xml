@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Attentive Normalization for Conditional Image Generation</title>
+    <url>/2020/08/20/AttentiveNorm/</url>
+    <content><![CDATA[<h3 id="Target-Motivation"><a href="#Target-Motivation" class="headerlink" title="Target/Motivation"></a>Target/Motivation</h3><p>Traditional convolution-based generative adversarial networks synthesize images based on hierarchical local operations, where long-range dependency relation is implicitly modeled with a Markov chain.</p>
+<p>传统的条件生成模型没有显示地去建立long-range dependency，难以捕获复杂的结构，the relation between distant locations relies on the Markovian modeling between convolutional layers.而是隐式地利用Markov chain来捕获long-range dependency。</p>
+<p>It is still not sufficient for categories with complicated structures.这对于一些复杂结构的类别是不足够的。</p>
+<p>而仅仅通过Markov chain，以stacked convs的形式来捕获long-range dependency是不够的。因为即使stacked convs具有large receptive field，但是仍然缺少model high-order relationship in distant locations的能力。</p>
+<p>而这种high-order relationship的能力，是十分重要的。It presents the semantic correspondence that human perception is familiar with and sensitive about, e.g. symmetry of natural objects and correspondence among limbs.</p>
+<p>为了有效地捕获long-range dependency，这里采用的是attentive normalization的方式。同时，这里是在建立语义一致的long-range feature之间的dependency，而不需要去考虑建立全局pixels之间的相关性。</p>
+<a id="more"></a>
+
+<p>相比于这篇文章提出的attentive normalization，SA-GAN（self-attention GAN）是直接以non-local/self-attention的方式来建立这种long-range dependency。然而self-attention需要去计算全局的相关性，也就是需要去建立任意两个pixel之间的相关性。这带来了很大的计算负担，尤其是当resolution变大时。</p>
+<p>从只关注语义一致的信息的角度出发，这种方式去建立long-range dependency可以不需要考虑全局的信息并建立全局的关系，从而减少了计算资源的负担。</p>
+<p>Attentive Normalization的工作是基于Instance Normalization的。后者仅仅考虑了spatial上的normalization，也就是channel-wise地进行normalization，而忽略了不同region可能对应不同的语义，从而应当对应不同的var和mean。</p>
+<h3 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h3><p>现有方法难以有效地捕获long-range dependency。即使stacked convs具有大的感受野，但是仍然缺少model high-order relationship in distant locations的能力。</p>
+<p>而这种high-order relationship的能力，是十分重要的。It presents the semantic correspondence that human perception is familiar with and sensitive about, e.g. symmetry of natural objects and correspondence among limbs.</p>
+<p>From the computation perspective, pair-wise relationship calculation in the feature map demands quadratic complexity (regarding both time and space), limiting its application to large feature maps.但是对于现有的attention mechanism而言，建立任意两个feature pixels之间的联系非常消耗计算资源。</p>
+<blockquote>
+<p>这也是一个值得深入的方向；如果才能从对应同一个semantic regions中借来相应的特征呢？</p>
+</blockquote>
+<h3 id="Related-works"><a href="#Related-works" class="headerlink" title="Related works"></a>Related works</h3><p>In image generation, distant relationship modeling via attention mechanisms is proved to be effective for learning high-dimensional and complex image distribution.</p>
+<p>对于学习高维特征和复杂的image distribution，attention mechanism有非常重要的意义。</p>
+<p>It makes the input features approach independent and identical distribution by a shared mean and variance.Normalization通过共享mean和var来实现输入features的分布的统一。This property accelerates training convergence of neural networks and makes training deep networks feasible. Generally, after normalizing the given feature maps, these features are further affine-transformed, which is learned upon other features or conditions. These ways of conditional normalization can benefit the generator in creating more plausible label-relevant content.在normalization之后，还会继续做一个仿射变换，这个仿射变换是根据feature或者是condition学习得到的，从而使得生成的feature是label-relevant的。</p>
+<h3 id="Approaches"><a href="#Approaches" class="headerlink" title="Approaches"></a>Approaches</h3><p>对于Attentive Normalization，首先是将feature map根据不同的semantics划分成不同的区域，并根据区域进行独立的normalization和de-normalization。所以分成两个模块，一个是semantic layout learning (SLL) module，另一个是根据semantic layout划分出来的regions来进行独立的regional normalization。</p>
+<p><strong>Semantic layout learning module</strong></p>
+<p>由semantics learning branch和self-sampling branch组成。对于semantics learning branch，是根据一定数量的convs来捕获对应具有不同的语义信息的regions。对于具有不同语义信息的regions，使用的是特定的filter来进行激活。这里基于这样的假设：每一个filter都对应一个特定semantic的entity；而对于self-sampling branch是用于辅助前面semantic learning branch的生成的。它对学习的semantic entity提供了一个正则约束，可以避免学习到无用的，与input feature无关的semantics。之后对于两个branch进行concat，并送入softmax中。</p>
+<p><strong>semantics learning branch。</strong>在此之前，先了解一个assumption：For each feature point from the feature map of the image, it is determined by at least one entity. 也就是说，对于每一个neuron pixel，都是由至少一个entity决定的。These entities can be employed to know novel objects in different contexts to obtain an expressive representation.这些entity可以帮助在不同的context中提供帮助，获取相应的object的信息，从而获取更好的representation。这个假设中的每个pixel有至少一个对应的entity是最有帮助的，表明了一个feature map中，是可以根据相应level下的不同的entity对feature map进行划分的。对于semantic layout的生成，实际上就是在完成这个针对一个feature map中不同entity的划分的任务。这种方式可以提高一个group内特征的类内相似性。</p>
+<p>首先设定有n个entity，并且定义features之间的相关性为dot-product的结果。semantic layout的生成过程是通过bp完成的。同时，通过不同entities的激活响应，将input feature map中的pixels融入不同的regions中。同时，为了让这些entities能够具有不同的pattern，还额外引入了正则项，这个正则项是针对<strong>learned weights</strong>即conv的参数进行的。</p>
+<p>在实现过程中，采用的是一个卷积层，其中有n个filters。这个conv layer将输入feature map转换到$\R^{C\times H\times W}$子空间中。</p>
+<p>然而，仅仅依靠这个分支，会使得模型将所有的feature pixels归到同一个class中，也就是生成的semantic layout为一个$1$.It is caused by not setting protocols to ban useless semantic entities that have low or no correlation with the input feature points.对于这个现象，作者认为是因为<strong>没有通过设置protocols来有效地避免关注到与输入feature points在语义上无关的或者说相关性很低的entities。</strong>因此提出了另一个branch，self-sampling branch来生成合理的semantic layout，避免trivial solution的出现。</p>
+<p><strong>self-sampling branch。</strong>这个branch是用于给第一个semantic learning branch在从头学习得到semantic layout时提供正则约束。这个思路是受feature quantization的启发，reassigns empty clusters with the centroid of a non-empty cluster.通过对空簇的质心分配非空簇的质心来实现。</p>
+<p>首先，采用self-attention的方式，从输入feature map得到k，q。对于q，这里采用sampling n个pixels的方式，认为采样的n个pixels，有一定几率得到对于不同的entity的pixels。这里采用dot-product的方式，通过计算这n个pixels和q中所有feature pixels之间的相似度，来完成类似聚类的操作，通过这种方式划分成n个不同的regions。实际上从attention的角度出发能够很好地理解这个branch。在self-sampling中，semantic layout就是attention scores。因为以self-attention的角度出发，对于每个q，关注的是k中那些特征和他相关；所以sampling的方式得到q，实际上就是相当于从原始任意两个pixels建立long-range dependencies变成建立指定n个pixels和global features之间的相关性，从而完成类似聚类的工作，得到一个semantic layout，通过<strong>Soft Semantic Layout Computation</strong>的方式来约束自适应学习的semantic layout，由此避免trivial solution的出现。对于Soft Semantic Layout Computation，通过将之前self-sampling branch得到的结果送入$1\times 1$卷积，并与semantic learning branch的结果进行相加，最后送入scale softmax得到soft semantic layout。</p>
+<p><strong>Regional Normalization</strong></p>
+<p>With the soft semantic layout, long-range relationship in feature maps is modeled by regional instance normalization.通过normalization，建立了同一个semantic下的long-range dependency。通过在semantic一致的区域内部共享mean和var，有助于提升模型的效果。通过和semantic layout点乘的方式，划分出不同的semantic相关的regions。并且针对每个region完成normalization。最后以residual的形式将进行了regional normalization的feature和原始feature进行融合。</p>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Specifically, the input feature map is softly divided into several regions based on its internal semantic similarity, which are respectively normalized. It enhances consistency between distant regions with semantic correspondence.这里是通过normalization的方式来建立相同语义的features之间的long-range dependency。</p>
+<p>In this paper, the authors normalize the input feature maps spatially according to the semantic layouts predicted from them.通过normalization的方式，在自动生成的semantic layout中进行。他有效地建立了long-range dependency，同时保留了空间维度上的semantics。</p>
+<p>关于semantic layout的生成，基于以下两个观察：（1）a feature map can be viewed as a composition of multiple semantic entities。一个feature map可以视为由不同语义的实体所组成；（2）the deep layers in a neural network capture high-level semantics of the input images。深层的网络可以捕获输入image中的高级语义信息。</p>
+<p>对于Attentive Normalization，能够以normalization的方式，通过使分布变得紧凑而增强semantics上相近的features之间的关系，而这个过程是忽略spatial limitation的。</p>
+]]></content>
+      <categories>
+        <category>Papers</category>
+      </categories>
+      <tags>
+        <tag>Inpainting</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CISI-net:Explicit Latent Content Inference and Imitated Style Rendering for Image Inpainting</title>
     <url>/2020/10/24/CISI/</url>
     <content><![CDATA[<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>基于neural patch（contextual attention等attention方法）的方法不太合理之处在于：might introduce undesired content change in the predicted region, especially when the desired content does not exist in the known region.</p>
@@ -88,52 +134,6 @@
 <p><strong>Style encoder (SE).</strong> 由于style feature是一个global effect，关于如何对inferred的content进行renderring。因此他应该能够从同一张image中无论被什么样的masks进行污染中得到相同的features，也就是对于masks不敏感。</p>
 <p><strong>Decoder.</strong> 受启发于style transform利用affine transformation parameters于norm layers中来表示style，这里采用Adative Instance Norm layer于residual blocks来调整generated images中的style。</p>
 <p><strong>Discriminator.</strong> 这里采用的LSGAN以及multi-scale discriminator来引导生成realistic details和correct global structure。</p>
-]]></content>
-      <categories>
-        <category>Papers</category>
-      </categories>
-      <tags>
-        <tag>Inpainting</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Attentive Normalization for Conditional Image Generation</title>
-    <url>/2020/08/20/AttentiveNorm/</url>
-    <content><![CDATA[<h3 id="Target-Motivation"><a href="#Target-Motivation" class="headerlink" title="Target/Motivation"></a>Target/Motivation</h3><p>Traditional convolution-based generative adversarial networks synthesize images based on hierarchical local operations, where long-range dependency relation is implicitly modeled with a Markov chain.</p>
-<p>传统的条件生成模型没有显示地去建立long-range dependency，难以捕获复杂的结构，the relation between distant locations relies on the Markovian modeling between convolutional layers.而是隐式地利用Markov chain来捕获long-range dependency。</p>
-<p>It is still not sufficient for categories with complicated structures.这对于一些复杂结构的类别是不足够的。</p>
-<p>而仅仅通过Markov chain，以stacked convs的形式来捕获long-range dependency是不够的。因为即使stacked convs具有large receptive field，但是仍然缺少model high-order relationship in distant locations的能力。</p>
-<p>而这种high-order relationship的能力，是十分重要的。It presents the semantic correspondence that human perception is familiar with and sensitive about, e.g. symmetry of natural objects and correspondence among limbs.</p>
-<p>为了有效地捕获long-range dependency，这里采用的是attentive normalization的方式。同时，这里是在建立语义一致的long-range feature之间的dependency，而不需要去考虑建立全局pixels之间的相关性。</p>
-<a id="more"></a>
-
-<p>相比于这篇文章提出的attentive normalization，SA-GAN（self-attention GAN）是直接以non-local/self-attention的方式来建立这种long-range dependency。然而self-attention需要去计算全局的相关性，也就是需要去建立任意两个pixel之间的相关性。这带来了很大的计算负担，尤其是当resolution变大时。</p>
-<p>从只关注语义一致的信息的角度出发，这种方式去建立long-range dependency可以不需要考虑全局的信息并建立全局的关系，从而减少了计算资源的负担。</p>
-<p>Attentive Normalization的工作是基于Instance Normalization的。后者仅仅考虑了spatial上的normalization，也就是channel-wise地进行normalization，而忽略了不同region可能对应不同的语义，从而应当对应不同的var和mean。</p>
-<h3 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h3><p>现有方法难以有效地捕获long-range dependency。即使stacked convs具有大的感受野，但是仍然缺少model high-order relationship in distant locations的能力。</p>
-<p>而这种high-order relationship的能力，是十分重要的。It presents the semantic correspondence that human perception is familiar with and sensitive about, e.g. symmetry of natural objects and correspondence among limbs.</p>
-<p>From the computation perspective, pair-wise relationship calculation in the feature map demands quadratic complexity (regarding both time and space), limiting its application to large feature maps.但是对于现有的attention mechanism而言，建立任意两个feature pixels之间的联系非常消耗计算资源。</p>
-<blockquote>
-<p>这也是一个值得深入的方向；如果才能从对应同一个semantic regions中借来相应的特征呢？</p>
-</blockquote>
-<h3 id="Related-works"><a href="#Related-works" class="headerlink" title="Related works"></a>Related works</h3><p>In image generation, distant relationship modeling via attention mechanisms is proved to be effective for learning high-dimensional and complex image distribution.</p>
-<p>对于学习高维特征和复杂的image distribution，attention mechanism有非常重要的意义。</p>
-<p>It makes the input features approach independent and identical distribution by a shared mean and variance.Normalization通过共享mean和var来实现输入features的分布的统一。This property accelerates training convergence of neural networks and makes training deep networks feasible. Generally, after normalizing the given feature maps, these features are further affine-transformed, which is learned upon other features or conditions. These ways of conditional normalization can benefit the generator in creating more plausible label-relevant content.在normalization之后，还会继续做一个仿射变换，这个仿射变换是根据feature或者是condition学习得到的，从而使得生成的feature是label-relevant的。</p>
-<h3 id="Approaches"><a href="#Approaches" class="headerlink" title="Approaches"></a>Approaches</h3><p>对于Attentive Normalization，首先是将feature map根据不同的semantics划分成不同的区域，并根据区域进行独立的normalization和de-normalization。所以分成两个模块，一个是semantic layout learning (SLL) module，另一个是根据semantic layout划分出来的regions来进行独立的regional normalization。</p>
-<p><strong>Semantic layout learning module</strong></p>
-<p>由semantics learning branch和self-sampling branch组成。对于semantics learning branch，是根据一定数量的convs来捕获对应具有不同的语义信息的regions。对于具有不同语义信息的regions，使用的是特定的filter来进行激活。这里基于这样的假设：每一个filter都对应一个特定semantic的entity；而对于self-sampling branch是用于辅助前面semantic learning branch的生成的。它对学习的semantic entity提供了一个正则约束，可以避免学习到无用的，与input feature无关的semantics。之后对于两个branch进行concat，并送入softmax中。</p>
-<p><strong>semantics learning branch。</strong>在此之前，先了解一个assumption：For each feature point from the feature map of the image, it is determined by at least one entity. 也就是说，对于每一个neuron pixel，都是由至少一个entity决定的。These entities can be employed to know novel objects in different contexts to obtain an expressive representation.这些entity可以帮助在不同的context中提供帮助，获取相应的object的信息，从而获取更好的representation。这个假设中的每个pixel有至少一个对应的entity是最有帮助的，表明了一个feature map中，是可以根据相应level下的不同的entity对feature map进行划分的。对于semantic layout的生成，实际上就是在完成这个针对一个feature map中不同entity的划分的任务。这种方式可以提高一个group内特征的类内相似性。</p>
-<p>首先设定有n个entity，并且定义features之间的相关性为dot-product的结果。semantic layout的生成过程是通过bp完成的。同时，通过不同entities的激活响应，将input feature map中的pixels融入不同的regions中。同时，为了让这些entities能够具有不同的pattern，还额外引入了正则项，这个正则项是针对<strong>learned weights</strong>即conv的参数进行的。</p>
-<p>在实现过程中，采用的是一个卷积层，其中有n个filters。这个conv layer将输入feature map转换到$\R^{C\times H\times W}$子空间中。</p>
-<p>然而，仅仅依靠这个分支，会使得模型将所有的feature pixels归到同一个class中，也就是生成的semantic layout为一个$1$.It is caused by not setting protocols to ban useless semantic entities that have low or no correlation with the input feature points.对于这个现象，作者认为是因为<strong>没有通过设置protocols来有效地避免关注到与输入feature points在语义上无关的或者说相关性很低的entities。</strong>因此提出了另一个branch，self-sampling branch来生成合理的semantic layout，避免trivial solution的出现。</p>
-<p><strong>self-sampling branch。</strong>这个branch是用于给第一个semantic learning branch在从头学习得到semantic layout时提供正则约束。这个思路是受feature quantization的启发，reassigns empty clusters with the centroid of a non-empty cluster.通过对空簇的质心分配非空簇的质心来实现。</p>
-<p>首先，采用self-attention的方式，从输入feature map得到k，q。对于q，这里采用sampling n个pixels的方式，认为采样的n个pixels，有一定几率得到对于不同的entity的pixels。这里采用dot-product的方式，通过计算这n个pixels和q中所有feature pixels之间的相似度，来完成类似聚类的操作，通过这种方式划分成n个不同的regions。实际上从attention的角度出发能够很好地理解这个branch。在self-sampling中，semantic layout就是attention scores。因为以self-attention的角度出发，对于每个q，关注的是k中那些特征和他相关；所以sampling的方式得到q，实际上就是相当于从原始任意两个pixels建立long-range dependencies变成建立指定n个pixels和global features之间的相关性，从而完成类似聚类的工作，得到一个semantic layout，通过<strong>Soft Semantic Layout Computation</strong>的方式来约束自适应学习的semantic layout，由此避免trivial solution的出现。对于Soft Semantic Layout Computation，通过将之前self-sampling branch得到的结果送入$1\times 1$卷积，并与semantic learning branch的结果进行相加，最后送入scale softmax得到soft semantic layout。</p>
-<p><strong>Regional Normalization</strong></p>
-<p>With the soft semantic layout, long-range relationship in feature maps is modeled by regional instance normalization.通过normalization，建立了同一个semantic下的long-range dependency。通过在semantic一致的区域内部共享mean和var，有助于提升模型的效果。通过和semantic layout点乘的方式，划分出不同的semantic相关的regions。并且针对每个region完成normalization。最后以residual的形式将进行了regional normalization的feature和原始feature进行融合。</p>
-<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Specifically, the input feature map is softly divided into several regions based on its internal semantic similarity, which are respectively normalized. It enhances consistency between distant regions with semantic correspondence.这里是通过normalization的方式来建立相同语义的features之间的long-range dependency。</p>
-<p>In this paper, the authors normalize the input feature maps spatially according to the semantic layouts predicted from them.通过normalization的方式，在自动生成的semantic layout中进行。他有效地建立了long-range dependency，同时保留了空间维度上的semantics。</p>
-<p>关于semantic layout的生成，基于以下两个观察：（1）a feature map can be viewed as a composition of multiple semantic entities。一个feature map可以视为由不同语义的实体所组成；（2）the deep layers in a neural network capture high-level semantics of the input images。深层的网络可以捕获输入image中的高级语义信息。</p>
-<p>对于Attentive Normalization，能够以normalization的方式，通过使分布变得紧凑而增强semantics上相近的features之间的关系，而这个过程是忽略spatial limitation的。</p>
 ]]></content>
       <categories>
         <category>Papers</category>
