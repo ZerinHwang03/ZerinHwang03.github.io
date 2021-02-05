@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"buttons","active":true,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInLeft"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"buttons","active":true,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInLeft"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false}};
   </script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Zerin Hwang&#39;s Homepage">
@@ -126,7 +126,8 @@
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
         <li class="menu-item menu-item-articles"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Articles</a></li>
         <li class="menu-item menu-item-publications"><a href="/publications/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Publications</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">1</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">2</span></a></li>
         <li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
@@ -194,13 +195,21 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">tags</span>
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -233,6 +242,7 @@
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
   <a href="https://github.com/ZerinHwang03" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
@@ -242,6 +252,181 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/24/CISI/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zhilin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zerin Hwang's Homepage">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/10/24/CISI/" class="post-title-link" itemprop="url">CISI-net:Explicit Latent Content Inference and Imitated Style Rendering for Image Inpainting</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-10-24 20:01:39" itemprop="dateCreated datePublished" datetime="2020-10-24T20:01:39+08:00">2020-10-24</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-05 23:35:38" itemprop="dateModified" datetime="2021-02-05T23:35:38+08:00">2021-02-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Papers/" itemprop="url" rel="index"><span itemprop="name">Papers</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>基于neural patch（contextual attention等attention方法）的方法不太合理之处在于：might introduce undesired content change in the predicted region, especially when the desired content does not exist in the known region.</p>
+<p>这篇文章就是为了解决上述的问题，通过显式地将image data分解为content和style code。提出了<strong>content inference and style imitation network (CISI-net)</strong></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/24/CISI/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/10/DeepImagePrior/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zhilin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zerin Hwang's Homepage">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/09/10/DeepImagePrior/" class="post-title-link" itemprop="url">Deep Image Prior</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-09-10 22:18:36" itemprop="dateCreated datePublished" datetime="2020-09-10T22:18:36+08:00">2020-09-10</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-05 23:36:35" itemprop="dateModified" datetime="2021-02-05T23:36:35+08:00">2021-02-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Papers/" itemprop="url" rel="index"><span itemprop="name">Papers</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Target-Motivation"><a href="#Target-Motivation" class="headerlink" title="Target/Motivation"></a>Target/Motivation</h3><p>Deep neural network能够很好地完成image generation和restoration任务，很大程度归功于network从大量的example iamges中学习realistic image priors。在这篇paper中，作者展示了一个事实，就是generator network的结构以及足够为any learning捕获low-level image statistics prior。为了证明这一点，作者通过randomly-initialized neural network也能够作为handcrafted prior在standard inverse problems（例如denosing，inpainting）中也能够有很好的效果。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/09/10/DeepImagePrior/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -282,8 +467,17 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-02-05 20:20:44" itemprop="dateModified" datetime="2021-02-05T20:20:44+08:00">2021-02-05</time>
+        <time title="Modified: 2021-02-05 23:35:32" itemprop="dateModified" datetime="2021-02-05T23:35:32+08:00">2021-02-05</time>
       </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Papers/" itemprop="url" rel="index"><span itemprop="name">Papers</span></a>
+        </span>
+    </span>
 
   
 </div>
@@ -301,33 +495,475 @@
 <p>而仅仅通过Markov chain，以stacked convs的形式来捕获long-range dependency是不够的。因为即使stacked convs具有large receptive field，但是仍然缺少model high-order relationship in distant locations的能力。</p>
 <p>而这种high-order relationship的能力，是十分重要的。It presents the semantic correspondence that human perception is familiar with and sensitive about, e.g. symmetry of natural objects and correspondence among limbs.</p>
 <p>为了有效地捕获long-range dependency，这里采用的是attentive normalization的方式。同时，这里是在建立语义一致的long-range feature之间的dependency，而不需要去考虑建立全局pixels之间的相关性。</p>
-<p>相比于这篇文章提出的attentive normalization，SA-GAN（self-attention GAN）是直接以non-local/self-attention的方式来建立这种long-range dependency。然而self-attention需要去计算全局的相关性，也就是需要去建立任意两个pixel之间的相关性。这带来了很大的计算负担，尤其是当resolution变大时。</p>
-<p>从只关注语义一致的信息的角度出发，这种方式去建立long-range dependency可以不需要考虑全局的信息并建立全局的关系，从而减少了计算资源的负担。</p>
-<p>Attentive Normalization的工作是基于Instance Normalization的。后者仅仅考虑了spatial上的normalization，也就是channel-wise地进行normalization，而忽略了不同region可能对应不同的语义，从而应当对应不同的var和mean。</p>
-<h3 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h3><p>现有方法难以有效地捕获long-range dependency。即使stacked convs具有大的感受野，但是仍然缺少model high-order relationship in distant locations的能力。</p>
-<p>而这种high-order relationship的能力，是十分重要的。It presents the semantic correspondence that human perception is familiar with and sensitive about, e.g. symmetry of natural objects and correspondence among limbs.</p>
-<p>From the computation perspective, pair-wise relationship calculation in the feature map demands quadratic complexity (regarding both time and space), limiting its application to large feature maps.但是对于现有的attention mechanism而言，建立任意两个feature pixels之间的联系非常消耗计算资源。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/20/AttentiveNorm/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/16/DeepFusionNet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zhilin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zerin Hwang's Homepage">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/08/16/DeepFusionNet/" class="post-title-link" itemprop="url">Deep Fusion Network for Image Completion</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-08-16 09:07:28" itemprop="dateCreated datePublished" datetime="2020-08-16T09:07:28+08:00">2020-08-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-05 23:36:29" itemprop="dateModified" datetime="2021-02-05T23:36:29+08:00">2021-02-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Papers/" itemprop="url" rel="index"><span itemprop="name">Papers</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Target-Motivation"><a href="#Target-Motivation" class="headerlink" title="Target/Motivation"></a>Target/Motivation</h3><p>Existing inpainting methods usually fail to harmonically blend the restored image into existing content, especially in the boundary area.</p>
+<p>目标是解决hole内生成结果和surrounding相一致/和谐的问题。</p>
+<p>The filled region must be perceptually plausible in the transition zone with sufficiently similar texture and consistent structure.</p>
+<p> 作者认为，实现生成在边界处的平滑过渡在一些场景下比获得更加realistic的结果更为重要。因此这篇paper的重点集中在hole regions和known regions之间的过渡上。</p>
+<p>之前的工作中，有针对边缘区域的pixel gradient进行优化的方法。对于融合质量的评价，通过判断两个图像梯度变化的一致性来判断。由此引申到restored content和known region之间连续性的保持上。</p>
+<p>Patrick et al. proposed a method to iteratively optimize the pixel gradient in edge transitional region. Given two images, the fusion quality depends on the consistency of the gradient changes of these two images, which is similar with the relationship between the restored content and the known region in image completion.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/16/DeepFusionNet/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/28/Deep-Inception-Generative-Network-for-Cognitive-Image-Inpainting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zhilin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zerin Hwang's Homepage">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/03/28/Deep-Inception-Generative-Network-for-Cognitive-Image-Inpainting/" class="post-title-link" itemprop="url">Deep Inception Generative Network for Cognitive Image Inpainting</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-03-28 19:39:52" itemprop="dateCreated datePublished" datetime="2020-03-28T19:39:52+08:00">2020-03-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-05 23:36:22" itemprop="dateModified" datetime="2021-02-05T23:36:22+08:00">2021-02-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Papers/" itemprop="url" rel="index"><span itemprop="name">Papers</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>“existing learning-based methods often create artifacts and fallacious textures because of <strong>insufficient cognition understanding.</strong>“</p>
+<p>“Previous generative networks are <strong>limited with single receptive type</strong> and <strong>give up pooling</strong> in consideration of <strong>detail sharpness.</strong>“</p>
 <blockquote>
-<p>这也是一个值得深入的方向；如果才能从对应同一个semantic regions中借来相应的特征呢？</p>
+<p>之前的工作都局限于一种receptive field，同时为了sharpness（可以从resolution的角度来理解）放弃了一些pooling</p>
 </blockquote>
-<h3 id="Related-works"><a href="#Related-works" class="headerlink" title="Related works"></a>Related works</h3><p>In image generation, distant relationship modeling via attention mechanisms is proved to be effective for learning high-dimensional and complex image distribution.</p>
-<p>对于学习高维特征和复杂的image distribution，attention mechanism有非常重要的意义。</p>
-<p>It makes the input features approach independent and identical distribution by a shared mean and variance.Normalization通过共享mean和var来实现输入features的分布的统一。This property accelerates training convergence of neural networks and makes training deep networks feasible. Generally, after normalizing the given feature maps, these features are further affine-transformed, which is learned upon other features or conditions. These ways of conditional normalization can benefit the generator in creating more plausible label-relevant content.在normalization之后，还会继续做一个仿射变换，这个仿射变换是根据feature或者是condition学习得到的，从而使得生成的feature是label-relevant的。</p>
-<h3 id="Approaches"><a href="#Approaches" class="headerlink" title="Approaches"></a>Approaches</h3><p>对于Attentive Normalization，首先是将feature map根据不同的semantics划分成不同的区域，并根据区域进行独立的normalization和de-normalization。所以分成两个模块，一个是semantic layout learning (SLL) module，另一个是根据semantic layout划分出来的regions来进行独立的regional normalization。</p>
-<p><strong>Semantic layout learning module</strong></p>
-<p>由semantics learning branch和self-sampling branch组成。对于semantics learning branch，是根据一定数量的convs来捕获对应具有不同的语义信息的regions。对于具有不同语义信息的regions，使用的是特定的filter来进行激活。这里基于这样的假设：每一个filter都对应一个特定semantic的entity；而对于self-sampling branch是用于辅助前面semantic learning branch的生成的。它对学习的semantic entity提供了一个正则约束，可以避免学习到无用的，与input feature无关的semantics。之后对于两个branch进行concat，并送入softmax中。</p>
-<p><strong>semantics learning branch。</strong>在此之前，先了解一个assumption：For each feature point from the feature map of the image, it is determined by at least one entity. 也就是说，对于每一个neuron pixel，都是由至少一个entity决定的。These entities can be employed to know novel objects in different contexts to obtain an expressive representation.这些entity可以帮助在不同的context中提供帮助，获取相应的object的信息，从而获取更好的representation。这个假设中的每个pixel有至少一个对应的entity是最有帮助的，表明了一个feature map中，是可以根据相应level下的不同的entity对feature map进行划分的。对于semantic layout的生成，实际上就是在完成这个针对一个feature map中不同entity的划分的任务。这种方式可以提高一个group内特征的类内相似性。</p>
-<p>首先设定有n个entity，并且定义features之间的相关性为dot-product的结果。semantic layout的生成过程是通过bp完成的。同时，通过不同entities的激活响应，将input feature map中的pixels融入不同的regions中。同时，为了让这些entities能够具有不同的pattern，还额外引入了正则项，这个正则项是针对<strong>learned weights</strong>即conv的参数进行的。</p>
-<p>在实现过程中，采用的是一个卷积层，其中有n个filters。这个conv layer将输入feature map转换到$\R^{C\times H\times W}$子空间中。</p>
-<p>然而，仅仅依靠这个分支，会使得模型将所有的feature pixels归到同一个class中，也就是生成的semantic layout为一个$1$.It is caused by not setting protocols to ban useless semantic entities that have low or no correlation with the input feature points.对于这个现象，作者认为是因为<strong>没有通过设置protocols来有效地避免关注到与输入feature points在语义上无关的或者说相关性很低的entities。</strong>因此提出了另一个branch，self-sampling branch来生成合理的semantic layout，避免trivial solution的出现。</p>
-<p><strong>self-sampling branch。</strong>这个branch是用于给第一个semantic learning branch在从头学习得到semantic layout时提供正则约束。这个思路是受feature quantization的启发，reassigns empty clusters with the centroid of a non-empty cluster.通过对空簇的质心分配非空簇的质心来实现。</p>
-<p>首先，采用self-attention的方式，从输入feature map得到k，q。对于q，这里采用sampling n个pixels的方式，认为采样的n个pixels，有一定几率得到对于不同的entity的pixels。这里采用dot-product的方式，通过计算这n个pixels和q中所有feature pixels之间的相似度，来完成类似聚类的操作，通过这种方式划分成n个不同的regions。实际上从attention的角度出发能够很好地理解这个branch。在self-sampling中，semantic layout就是attention scores。因为以self-attention的角度出发，对于每个q，关注的是k中那些特征和他相关；所以sampling的方式得到q，实际上就是相当于从原始任意两个pixels建立long-range dependencies变成建立指定n个pixels和global features之间的相关性，从而完成类似聚类的工作，得到一个semantic layout，通过<strong>Soft Semantic Layout Computation</strong>的方式来约束自适应学习的semantic layout，由此避免trivial solution的出现。对于Soft Semantic Layout Computation，通过将之前self-sampling branch得到的结果送入$1\times 1$卷积，并与semantic learning branch的结果进行相加，最后送入scale softmax得到soft semantic layout。</p>
-<p><strong>Regional Normalization</strong></p>
-<p>With the soft semantic layout, long-range relationship in feature maps is modeled by regional instance normalization.通过normalization，建立了同一个semantic下的long-range dependency。通过在semantic一致的区域内部共享mean和var，有助于提升模型的效果。通过和semantic layout点乘的方式，划分出不同的semantic相关的regions。并且针对每个region完成normalization。最后以residual的形式将进行了regional normalization的feature和原始feature进行融合。</p>
-<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><p>Specifically, the input feature map is softly divided into several regions based on its internal semantic similarity, which are respectively normalized. It enhances consistency between distant regions with semantic correspondence.这里是通过normalization的方式来建立相同语义的features之间的long-range dependency。</p>
-<p>In this paper, the authors normalize the input feature maps spatially according to the semantic layouts predicted from them.通过normalization的方式，在自动生成的semantic layout中进行。他有效地建立了long-range dependency，同时保留了空间维度上的semantics。</p>
-<p>关于semantic layout的生成，基于以下两个观察：（1）a feature map can be viewed as a composition of multiple semantic entities。一个feature map可以视为由不同语义的实体所组成；（2）the deep layers in a neural network capture high-level semantics of the input images。深层的网络可以捕获输入image中的高级语义信息。</p>
-<p>对于Attentive Normalization，能够以normalization的方式，通过使分布变得紧凑而增强semantics上相近的features之间的关系，而这个过程是忽略spatial limitation的。</p>
+<p>“Human cognition is <strong>constant</strong> regardless of the target attribute. <strong>As multiple receptive fields improve the ability of abstract image characterization</strong> and <strong>pooling can keep feature invariant</strong>, specifically, <strong>deep inception learning</strong> is adopted to promote <strong>high-level feature representation</strong> and <strong>enhance model learning capacity</strong> for local patches.”</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/03/28/Deep-Inception-Generative-Network-for-Cognitive-Image-Inpainting/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/28/EdgeConnect/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zhilin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zerin Hwang's Homepage">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/03/28/EdgeConnect/" class="post-title-link" itemprop="url">EdgeConnect:Generative Image Inpainting With Adversarial Edge Learning</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-03-28 15:51:10" itemprop="dateCreated datePublished" datetime="2020-03-28T15:51:10+08:00">2020-03-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-05 23:36:41" itemprop="dateModified" datetime="2021-02-05T23:36:41+08:00">2021-02-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Papers/" itemprop="url" rel="index"><span itemprop="name">Papers</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>“many existing image inpainting techniques generate over-smoothed and/or blurry regions, failing to reproduce fine details.”</p>
+<p>“However, many techniques <strong>fail to reconstruct reasonable structures</strong> as they are commonly over-smoothed and/or blurry.”</p>
+<p>“This paper develops a new approach for image inpainting that does a better job of <strong>reproducing filled regions exhibiting fine details.</strong>“</p>
+<p>“The edge generator <strong>hallucinates edges</strong> of the missing region (both regular and irregular) of the image, and the image completion network <strong>fills in the missing regions</strong> using hallucinated edges <strong>as a priori.</strong>“</p>
+<blockquote>
+<p>同样是two-stage的架构，但是这里是先对反映structure信息的edge进行修复。之后再将这个edge作为先验来完成后续的修复工作</p>
+</blockquote>
+<p>“While these approaches are able to generate missing regions with <strong>meaningful structures</strong>, the generated regions are often <strong>blurry or suffer from artifacts</strong>, suggesting that these methods <strong>struggle to reconstruct high frequency information accurately.</strong>“</p>
+<p>“Since image structure is well-represented in its edge mask, we show that it is possible to generate superior results by conditioning an image inpainting network on edges in the missing regions. Clearly, we do not have access to edges in the missing regions. Rather, we train an edge generator that hallucinates edges in these areas.”</p>
+<p>“Our approach of “<strong>lines first, color next</strong>” is partly inspired by our understanding of how artists work.”</p>
+<p>“<strong><em>In line drawing, the lines not only delineate and define spaces and shapes; they also play a vital role in the composition</em></strong>“</p>
+<p>“Edge recovery, we suppose, <strong>is an easier task than image completion.</strong>“</p>
+<p>“Our proposed model essentially <strong>decouples the recovery of high and low-frequency information</strong> of the inpainted region.”</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/03/28/EdgeConnect/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/27/Coarse-to-Fine/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zhilin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zerin Hwang's Homepage">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/03/27/Coarse-to-Fine/" class="post-title-link" itemprop="url">Coarse-to-Fine Image Inpainting via Region-Wise Convolutions and Non-Local Correlation</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-03-27 22:07:02" itemprop="dateCreated datePublished" datetime="2020-03-27T22:07:02+08:00">2020-03-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-05 23:35:46" itemprop="dateModified" datetime="2021-02-05T23:35:46+08:00">2021-02-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Papers/" itemprop="url" rel="index"><span itemprop="name">Papers</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>“Existing methods usually adopted the standard convolutional architecture over the corrupted image, where <strong>the same convolution filters</strong> try to <strong>restore the diverse information</strong> on both existing and missing regions, and meanwhile <strong>ignore the long-distance correlation</strong> among the regions.”</p>
+<p>“<strong>Only relying on the surrounding areas</strong> inevitably leads to <strong>meaningless contents and artifacts</strong>, such as color discrepancy and blur.”</p>
+<blockquote>
+<p>莫不是和CSA一样的出发点：不能够仅仅关注于surrounding areas</p>
+</blockquote>
+<p>“We first propose <strong>region-wise convolutions</strong> to <strong>locally</strong> deal with the different types of regions, which can help <strong>exactly reconstruct existing regions and roughly infer the missing ones</strong> from existing regions at the same time.”</p>
+<p>“Then, a <strong>non-local operation</strong> is introduced to <strong>globally</strong> model the correlation among different regions, promising <strong>visual consistency</strong> between missing and existing regions.”</p>
+<blockquote>
+<p>采用的是先Local后Global的策略。Local是为了预测和重建，而Global是为了保持一致性</p>
+</blockquote>
+<p>局部=&gt;关注细节，但是缺乏对整体的把握，这也是为什么会在hole regions和known regions之间存在边界处不连续的原因=&gt;关注的太局部</p>
+<p>全局=&gt;对整体语义的把握更有优势，但是缺乏了对细节的掌握</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/03/27/Coarse-to-Fine/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/21/Contextual-based-Infer-Match-Translate/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zhilin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zerin Hwang's Homepage">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/03/21/Contextual-based-Infer-Match-Translate/" class="post-title-link" itemprop="url">Contextual-Based Imgae Inpainting:Infer, Match, and Translate</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-03-21 11:05:06" itemprop="dateCreated datePublished" datetime="2020-03-21T11:05:06+08:00">2020-03-21</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-05 23:36:08" itemprop="dateModified" datetime="2021-02-05T23:36:08+08:00">2021-02-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Papers/" itemprop="url" rel="index"><span itemprop="name">Papers</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>出发点：</p>
+<p>就像之前对GAN的理解那样，实际上是为了找到一个mapping能将corrupted images转换到gt images上，然而之前的一些工作是直接找一个mapping，作者认为这样难度太大，所以将这个mapping分成了两个部分，由此简化任务的难度。将一个image translation problem划分成了两个image translation problems</p>
 
       
     </div>
@@ -346,6 +982,184 @@
 
 
 
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/12/Leetcode58/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zhilin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zerin Hwang's Homepage">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/03/12/Leetcode58/" class="post-title-link" itemprop="url">Leetcode58:最后一个单词的长度</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-03-12 23:59:27" itemprop="dateCreated datePublished" datetime="2020-03-12T23:59:27+08:00">2020-03-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-06 00:16:00" itemprop="dateModified" datetime="2021-02-06T00:16:00+08:00">2021-02-06</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="58-最后一个单词的长度"><a href="#58-最后一个单词的长度" class="headerlink" title="58. 最后一个单词的长度"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/length-of-last-word/">58. 最后一个单词的长度</a></h3><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>给你一个字符串 s，由若干单词组成，单词之间用空格隔开。返回字符串中最后一个单词的长度。如果不存在最后一个单词，请返回 0 。</p>
+<p>单词 是指仅由字母组成、不包含任何空格字符的最大子字符串。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/03/12/Leetcode58/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/12/Leetcode206/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zhilin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zerin Hwang's Homepage">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/03/12/Leetcode206/" class="post-title-link" itemprop="url">LeetCode206反转链表</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-03-12 00:04:59" itemprop="dateCreated datePublished" datetime="2020-03-12T00:04:59+08:00">2020-03-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-06 00:16:24" itemprop="dateModified" datetime="2021-02-06T00:16:24+08:00">2021-02-06</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206. 反转链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list/">206. 反转链表</a></h4><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>反转一个单链表。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/03/12/Leetcode206/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
 
 
 <script>
@@ -383,14 +1197,14 @@
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zerin Hwang</span>
-</div>
+</div><script color="0,0,255" opacity="0.5" zIndex="-1" count="99" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
 
     </div>
   </footer>
 
   
   <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
 
   
   <script>

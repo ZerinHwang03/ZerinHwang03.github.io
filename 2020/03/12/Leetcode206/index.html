@@ -23,20 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"buttons","active":true,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInLeft"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="I’m Zhilin Huang, a Master student from Peking Univerity. I received the B.S. degree from Harbin Institute of Technology, Harbin, China. My research interests include image inpainting, multimodal lear">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zerin Hwang&#39;s Homepage">
-<meta property="og:url" content="http://example.com/about/index.html">
+<meta name="description" content="206. 反转链表题目反转一个单链表。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode206反转链表">
+<meta property="og:url" content="http://example.com/2020/03/12/Leetcode206/index.html">
 <meta property="og:site_name" content="Zerin Hwang&#39;s Homepage">
-<meta property="og:description" content="I’m Zhilin Huang, a Master student from Peking Univerity. I received the B.S. degree from Harbin Institute of Technology, Harbin, China. My research interests include image inpainting, multimodal lear">
+<meta property="og:description" content="206. 反转链表题目反转一个单链表。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-05T07:19:07.050Z">
-<meta property="article:modified_time" content="2021-02-05T07:19:07.041Z">
+<meta property="article:published_time" content="2020-03-11T16:04:59.000Z">
+<meta property="article:modified_time" content="2021-02-05T16:16:24.707Z">
 <meta property="article:author" content="Zhilin Huang">
+<meta property="article:tag" content="LeetCode">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/about/">
+<link rel="canonical" href="http://example.com/2020/03/12/Leetcode206/">
 
 
 <script class="page-configurations">
@@ -44,12 +45,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
-<title> | Zerin Hwang's Homepage
-</title>
+<title>LeetCode206反转链表 | Zerin Hwang's Homepage</title>
   
 
 
@@ -173,7 +173,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -186,6 +186,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">206. 反转链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE"><span class="nav-number">2.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-number">3.</span> <span class="nav-text">题解</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -256,37 +257,133 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/03/12/Leetcode206/">
 
-    
-    
-    
-    <div class="post-block" lang="en"><header class="post-header">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zhilin Huang">
+      <meta itemprop="description" content="">
+    </span>
 
-<h1 class="post-title" itemprop="name headline">
-</h1>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zerin Hwang's Homepage">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LeetCode206反转链表
+        </h1>
 
-<div class="post-meta-container">
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-03-12 00:04:59" itemprop="dateCreated datePublished" datetime="2020-03-12T00:04:59+08:00">2020-03-12</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-02-06 00:16:24" itemprop="dateModified" datetime="2021-02-06T00:16:24+08:00">2021-02-06</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a>
+        </span>
+    </span>
+
+  
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body">
-          <p>I’m Zhilin Huang, a Master student from Peking Univerity. I received the B.S. degree from Harbin Institute of Technology, Harbin, China. My research interests include image inpainting, multimodal learning and semantic segmentation.</p>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h4 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206. 反转链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list/">206. 反转链表</a></h4><h4 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h4><p>反转一个单链表。</p>
+<a id="more"></a>
 
-      </div>
-      
-      
-      
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL</span><br><span class="line">输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</span><br></pre></td></tr></table></figure>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><p>很简单的思路：</p>
+<p>只需要先找到链表的最后一个节点，并存储，作为反转后的链表的const head指针。整个过程只需要将原链表中的第一个节点插入原链表中最后一个节点之后即可。代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">reverseList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head==<span class="literal">NULL</span>) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode* tail = findTail(head);</span><br><span class="line">        ListNode* cur = head;</span><br><span class="line">        <span class="keyword">while</span>(cur!=tail)&#123;</span><br><span class="line">            head = head-&gt;next;</span><br><span class="line">            insert_next(tail, cur);</span><br><span class="line">            cur=head;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> tail;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">ListNode* <span class="title">findTail</span><span class="params">(ListNode* head)</span></span>;</span><br><span class="line">    <span class="function">ListNode* <span class="title">insert_next</span><span class="params">(ListNode* head, ListNode* node)</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function">ListNode* <span class="title">Solution::findTail</span><span class="params">(ListNode* head)</span></span>&#123;</span><br><span class="line">        ListNode* cur=head;</span><br><span class="line">        <span class="keyword">if</span>(cur==<span class="literal">NULL</span>) <span class="keyword">return</span> head;</span><br><span class="line">        <span class="keyword">while</span>(cur-&gt;next!=<span class="literal">NULL</span>) cur=cur-&gt;next;</span><br><span class="line">        <span class="keyword">return</span> cur;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ListNode* <span class="title">Solution::insert_next</span><span class="params">(ListNode* head, ListNode* node)</span></span>&#123;</span><br><span class="line">    node-&gt;next=head-&gt;next;</span><br><span class="line">    head-&gt;next=node;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>Welcome to my other publishing channels</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
+          </div>
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/03/05/Leetcode13/" rel="prev" title="Leetcode13.罗马数字转整数">
+                  <i class="fa fa-chevron-left"></i> Leetcode13.罗马数字转整数
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/03/12/Leetcode58/" rel="next" title="Leetcode58:最后一个单词的长度">
+                  Leetcode58:最后一个单词的长度 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 
