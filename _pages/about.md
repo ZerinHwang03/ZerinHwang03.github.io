@@ -15,19 +15,19 @@ Zhilin Huang received his B.S. from the School of Electronics and Information En
 
 Education
 ------
-- **Tsinghua University**
+**Tsinghua University** (2022.09 - present)
     
-    Ph.D (2022.09 - present)
+Ph.D
 
     
-- **Peking University**
+**Peking University** (2019.09 - 2022.07)
 
-    Master Degree (2019.09 - 2022.07)
+Master Degree
 
 
-- **Harbin Institute of Technology**
+**Harbin Institute of Technology** (2015.09 - 2019.07)
 
-    Bachelor Degree (2015.09 - 2019.07)
+Bachelor Degree
 
 Research Experience
 ------
