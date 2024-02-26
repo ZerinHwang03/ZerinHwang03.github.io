@@ -7,13 +7,14 @@ redirect_from:
   - /about.html
 ---
 
-****
+
 Biography
-======
+------
 Zhilin Huang received his B.S. from the School of Electronics and Information Engineering, Harbin Institute of Technology in 2019. He received his M.S. from the School of Electronic and Computer Engineering, Peking University in 2022. He is currently a Ph.D. student in Tsinghua University. His research interests include computer vision, self-supervised learning, computational biology.
-****
+
+
 Education
-======
+------
 - **Tsinghua University**
     
     Ph.D (2022.09 - present)
@@ -27,13 +28,13 @@ Education
 - **Harbin Institute of Technology**
 
     Bachelor Degree (2015.09 - 2019.07)
-****
+
 Research Experience
 ------
 - **ByteDance AI-Lab**
 
-    Research Intern. (2021.04-2021.11)
-****
+    Research Intern (2021.04-2021.11)
+
 Publications
 ------
 *: equal contribution.
@@ -71,7 +72,7 @@ Publications
 - **[IJCNN 2021] Bi-encoder Network with Structure-texture Consistency for Image Inpainting**
     
     _Chujun Qin, **Zhilin Huang**, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_
-****
+
 Manuscripts
 ------
 *: equal contribution.
