@@ -15,25 +15,27 @@ Zhilin Huang received his B.S. from the School of Electronics and Information En
 
 Education
 ------
-**Tsinghua University** (2022.09 - present)
+**Tsinghua University** _(2022.09 - present)_
     
 Ph.D
 
     
-**Peking University** (2019.09 - 2022.07)
+**Peking University** _(2019.09 - 2022.07)_
 
 Master Degree
 
 
-**Harbin Institute of Technology** (2015.09 - 2019.07)
+**Harbin Institute of Technology** _(2015.09 - 2019.07)_
 
 Bachelor Degree
 
 Research Experience
 ------
-- **ByteDance AI-Lab**
+**ByteDance AI-Lab** _(2021.04-2021.11)_
 
-    Research Intern (2021.04-2021.11)
+Research Intern
+
+_Self-supervised Learning, Multi-modal Learning_
 
 Publications
 ------
