@@ -9,91 +9,70 @@ redirect_from:
 
 
 Biography
-------
+======
 Zhilin Huang received his B.S. from the School of Electronics and Information Engineering, Harbin Institute of Technology in 2019. He received his M.S. from the School of Electronic and Computer Engineering, Peking University in 2022. He is currently a Ph.D. student in Tsinghua University. His research interests include computer vision, self-supervised learning, computational biology.
 
 
 Education
-------
-**Tsinghua University** _(2022.09 - present)_
-    
-Ph.D
+======
+* 09.2022 - present **Ph.D**, **Tsinghua University**.
+* 09.2019 - 07.2022 **Master**, **Peking University**.
+* 09.2015 - 07.2019 **B.S.**, **Harbin Institute of Technology**.
 
-    
-**Peking University** _(2019.09 - 2022.07)_
-
-Master Degree
-
-
-**Harbin Institute of Technology** _(2015.09 - 2019.07)_
-
-Bachelor Degree
 
 Research Experience
-------
-**ByteDance AI-Lab** _(2021.04-2021.11)_
-
-Research Intern
-
+======
+* 04.2021 - 11.2021 **Research Intern**, **ByteDance AI-Lab** <br>
 _Self-supervised Learning, Multi-modal Learning_
 
 Publications
-------
+======
 ***: equal contribution.**
 
-**``[CVPR 2024]`` Bilateral Event Mining and Complementary for Event Stream Super-Resolution**
+**Bilateral Event Mining and Complementary for Event Stream Super-Resolution** <br>
+_**Zhilin Huang***, Quanmin Liang*, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_ <br>
+``[CVPR 2024]`` <br>
 
-_**Zhilin Huang***, Quanmin Liang*, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_
+**Protein-Ligand Interaction Prior for Binding-aware 3D Molecule Diffusion Models** <br>
+_**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Zhilong Zhang, Wentao Zhang, Xiawu Zheng, Jie Chen, Yu Wang, Bin Cui, Wenming Yang_ <br>
+``[ICLR 2024]`` <br>
 
+**Binding-Adaptive Diffusion Models for Structure-Based Drug Design** <br>
+_**Zhilin Huang***, Ling Yang*, Zaixi Zhang, Xiangxin Zhou, Yu Bao, Xiawu Zheng, Yuwei Yang, Yu Wang, Wenming Yang_ <br>
+``[AAAI 2024]`` <br>
 
-**``[ICLR 2024]`` Protein-Ligand Interaction Prior for Binding-aware 3D Molecule Diffusion Models**
+**Improving diffusion-based image synthesis with context prediction** <br>
+_Ling Yang, Jingwei Liu, Shenda Hong, Zhilong Zhang, **Zhilin Huang**, Zheming Cai, Wentao Zhang, Bin Cui_ <br>
+``[NIPS 2023]`` <br>
 
-_**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Zhilong Zhang, Wentao Zhang, Xiawu Zheng, Jie Chen, Yu Wang, Bin Cui, Wenming Yang_ 
+**Individual and Structural Graph Information Bottlenecks for Out-of-Distribution Generalization** <br>
+_Ling Yang, Jiayi Zheng, Heyuan Wang, Zhongyi Liu, **Zhilin Huang**, Shenda Hong, Wentao Zhang, Bin Cui_ <br>
+``[TKDE 2024]`` <br> 
 
+**Semantic-aware Context Aggregation for Image Inpainting** <br>
+_**Zhilin Huang***, Chujun Qin*, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
+``[ICASSP 2021]`` <br> 
 
-**``[AAAI 2024]`` Binding-Adaptive Diffusion Models for Structure-Based Drug Design**
+**Confidence-based Global Attention Guided Network for Image Inpainting** <br>
+_**Zhilin Huang**, Chujun Qin, Lei Li, Ruixin Liu, Yuesheng Zhu_ <br>
+``[MMM 2021]`` <br> 
 
-_**Zhilin Huang***, Ling Yang*, Zaixi Zhang, Xiangxin Zhou, Yu Bao, Xiawu Zheng, Yuwei Yang, Yu Wang, Wenming Yang_
-
-
-**``[NIPS 2023]`` Improving diffusion-based image synthesis with context prediction**
-    
-_Ling Yang, Jingwei Liu, Shenda Hong, Zhilong Zhang, **Zhilin Huang**, Zheming Cai, Wentao Zhang, Bin Cui_
-
-
-**``[TKDE 2024]`` Individual and Structural Graph Information Bottlenecks for Out-of-Distribution Generalization**
-    
-_Ling Yang, Jiayi Zheng, Heyuan Wang, Zhongyi Liu, **Zhilin Huang**, Shenda Hong, Wentao Zhang, Bin Cui_
-
-
-**``[ICASSP 2021]`` Semantic-aware Context Aggregation for Image Inpainting**
-    
-_**Zhilin Huang***, Chujun Qin*, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_
-
-
-**``[MMM 2021]`` Confidence-based Global Attention Guided Network for Image Inpainting**
-    
-_**Zhilin Huang**, Chujun Qin, Lei Li, Ruixin Liu, Yuesheng Zhu_
-
-
-**``[IJCNN 2021]`` Bi-encoder Network with Structure-texture Consistency for Image Inpainting**
-    
-_Chujun Qin, **Zhilin Huang**, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_
+**Bi-encoder Network with Structure-texture Consistency for Image Inpainting** <br>
+_Chujun Qin, **Zhilin Huang**, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
+``[IJCNN 2021]`` <br> 
 
 Manuscripts
 ------
 ***: equal contribution.**
 
-**``[arXiv:2211.11138]`` Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training**
-    
-_Ling Yang*, **Zhilin Huang***, Yang Song, Shenda Hong, Guohao Li, Wentao Zhang, Bin Cui, Bernard Ghanem, Ming-Hsuan Yang_ 
+**Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
+_Ling Yang*, **Zhilin Huang***, Yang Song, Shenda Hong, Guohao Li, Wentao Zhang, Bin Cui, Bernard Ghanem, Ming-Hsuan Yang_ <br> 
+``[arXiv:2211.11138]`` <br> 
 
+**Region-aware Attention for Image Inpainting** <br>
+_**Zhilin Huang**, Chujun Qin, Zhenyu Weng, Yuesheng Zhu_ <br>
+``[arXiv:2204.01004]`` <br> 
 
-**``[arXiv:2204.01004]`` Region-aware Attention for Image Inpainting**
-    
-_**Zhilin Huang**, Chujun Qin, Zhenyu Weng, Yuesheng Zhu_
-
-
-**``[arXiv:2111.03414]`` Structure-aware Image Inpainting with Two Parallel Streams**
-    
-_**Zhilin Huang**, Chujun Qin, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_
+**Structure-aware Image Inpainting with Two Parallel Streams** <br>
+_**Zhilin Huang**, Chujun Qin, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
+``[arXiv:2111.03414]`` <br> 
