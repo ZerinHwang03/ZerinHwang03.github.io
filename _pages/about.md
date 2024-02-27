@@ -46,11 +46,12 @@ _**Zhilin Huang***, Quanmin Liang*, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang
 **Protein-Ligand Interaction Prior for Binding-aware 3D Molecule Diffusion Models** <br>
 _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Zhilong Zhang, Wentao Zhang, Xiawu Zheng, Jie Chen, Yu Wang, Bin Cui, Wenming Yang_ <br>
 ``[ICLR 2024]`` <br>
-[[paper]](https://openreview.net/forum?id=qH9nrMNTIW)
+[[paper]](https://openreview.net/forum?id=qH9nrMNTIW) [[code]](https://github.com/YangLing0818/IPDiff)
 
 **Binding-Adaptive Diffusion Models for Structure-Based Drug Design** <br>
 _**Zhilin Huang***, Ling Yang*, Zaixi Zhang, Xiangxin Zhou, Yu Bao, Xiawu Zheng, Yuwei Yang, Yu Wang, Wenming Yang_ <br>
 ``[AAAI 2024]`` <br>
+[[code]](https://github.com/YangLing0818/BindDM)
 
 
 **Improving diffusion-based image synthesis with context prediction** <br>
@@ -87,7 +88,7 @@ Manuscripts
 **Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
 _Ling Yang*, **Zhilin Huang***, Yang Song, Shenda Hong, Guohao Li, Wentao Zhang, Bin Cui, Bernard Ghanem, Ming-Hsuan Yang_ <br> 
 ``[arXiv:2211.11138]`` <br> 
-[[paper]](https://arxiv.org/abs/2211.11138)
+[[paper]](https://arxiv.org/abs/2211.11138) [[code]](https://github.com/YangLing0818/SGDiff)
 
 **Region-aware Attention for Image Inpainting** <br>
 _**Zhilin Huang**, Chujun Qin, Zhenyu Weng, Yuesheng Zhu_ <br>
