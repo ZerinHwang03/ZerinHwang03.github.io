@@ -41,6 +41,11 @@ Publications
 ------
 ***: equal contribution.**
 
+**``[CVPR 2024]`` Bilateral Event Mining and Complementary for Event Stream Super-Resolution**
+
+_**Zhilin Huang***, Quanmin Liang*, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_
+
+
 **``[ICLR 2024]`` Protein-Ligand Interaction Prior for Binding-aware 3D Molecule Diffusion Models**
 
 _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Zhilong Zhang, Wentao Zhang, Xiawu Zheng, Jie Chen, Yu Wang, Bin Cui, Wenming Yang_ 
