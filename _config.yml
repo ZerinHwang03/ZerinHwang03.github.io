@@ -10,7 +10,7 @@
 locale                   : "en-US"
 title                    : "Zhilin Huang (黄祉霖)"
 title_separator          : "-"
-name                     : &name "Zhilin Huang"
+name                     : &name "Zhilin Huang\n黄祉霖"
 description              : &description "personal description"
 url                      : "https://ZerinHwang03.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
