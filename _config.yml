@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Zhilin Huang's Personal Homepage"
+title                    : "Zhilin Huang (黄祉霖)"
 title_separator          : "-"
 name                     : &name "Zhilin Huang"
 description              : &description "personal description"
@@ -24,7 +24,7 @@ author:
   avatar           : "zhilin.png"
   name             : "Zhilin Huang"
   pronouns         : # "He/Him"
-  bio              : "Email: zerinhwang03@pku.edu.cn\n WeChat: zerinhwang03"
+  bio              : "Email: zerinhwang03@pku.edu.cn"
   location         : # "Earth"
   employer         : # "Tsinghua University"
   uri              : # URL
