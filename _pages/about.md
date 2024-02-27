@@ -18,7 +18,7 @@ Education
 **Ph.D.**, **Tsinghua University**<br>
 _2022.09 - present_
 
-**Master**, **Peking University** <br>
+**M.S.**, **Peking University**<br>
 _2019.09 - 2022.07_ 
 
 **B.S.**, **Harbin Institute of Technology**<br>
