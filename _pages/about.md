@@ -35,7 +35,7 @@ Self-supervised Learning, Multi-modal Learning
 
 ****
 
-Publications
+Papers
 ======
 ***: equal contribution.**
 
@@ -53,6 +53,10 @@ _**Zhilin Huang***, Ling Yang*, Zaixi Zhang, Xiangxin Zhou, Yu Bao, Xiawu Zheng,
 ``[AAAI 2024]`` <br>
 [[code]](https://github.com/YangLing0818/BindDM)
 
+**Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
+_Ling Yang*, **Zhilin Huang***, Yang Song, Shenda Hong, Guohao Li, Wentao Zhang, Bin Cui, Bernard Ghanem, Ming-Hsuan Yang_ <br> 
+``[arXiv:2211.11138] 2023`` <br> 
+[[paper]](https://arxiv.org/abs/2211.11138) [[code]](https://github.com/YangLing0818/SGDiff)
 
 **Improving diffusion-based image synthesis with context prediction** <br>
 _Ling Yang, Jingwei Liu, Shenda Hong, Zhilong Zhang, **Zhilin Huang**, Zheming Cai, Wentao Zhang, Bin Cui_ <br>
@@ -61,8 +65,18 @@ _Ling Yang, Jingwei Liu, Shenda Hong, Zhilong Zhang, **Zhilin Huang**, Zheming C
 
 **Individual and Structural Graph Information Bottlenecks for Out-of-Distribution Generalization** <br>
 _Ling Yang, Jiayi Zheng, Heyuan Wang, Zhongyi Liu, **Zhilin Huang**, Shenda Hong, Wentao Zhang, Bin Cui_ <br>
-``[TKDE 2024]`` <br> 
+``[TKDE 2023]`` <br> 
 [[paper]](https://ieeexplore.ieee.org/abstract/document/10168296)
+
+**Region-aware Attention for Image Inpainting** <br>
+_**Zhilin Huang**, Chujun Qin, Zhenyu Weng, Yuesheng Zhu_ <br>
+``[arXiv:2204.01004] 2022`` <br> 
+[[paper]](https://arxiv.org/abs/2204.01004)
+
+**Structure-aware Image Inpainting with Two Parallel Streams** <br>
+_**Zhilin Huang**, Chujun Qin, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
+``[arXiv:2111.03414] 2021`` <br>
+[[paper]](https://arxiv.org/abs/2111.03414)
 
 **Semantic-aware Context Aggregation for Image Inpainting** <br>
 _**Zhilin Huang***, Chujun Qin*, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
@@ -78,26 +92,3 @@ _**Zhilin Huang**, Chujun Qin, Lei Li, Ruixin Liu, Yuesheng Zhu_ <br>
 _Chujun Qin, **Zhilin Huang**, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
 ``[IJCNN 2021]`` <br> 
 [[paper]](https://ieeexplore.ieee.org/abstract/document/9534475)
-
-****
-
-Manuscripts
-======
-***: equal contribution.**
-
-**Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
-_Ling Yang*, **Zhilin Huang***, Yang Song, Shenda Hong, Guohao Li, Wentao Zhang, Bin Cui, Bernard Ghanem, Ming-Hsuan Yang_ <br> 
-``[arXiv:2211.11138]`` <br> 
-[[paper]](https://arxiv.org/abs/2211.11138) [[code]](https://github.com/YangLing0818/SGDiff)
-
-**Region-aware Attention for Image Inpainting** <br>
-_**Zhilin Huang**, Chujun Qin, Zhenyu Weng, Yuesheng Zhu_ <br>
-``[arXiv:2204.01004]`` <br> 
-[[paper]](https://arxiv.org/abs/2204.01004)
-
-**Structure-aware Image Inpainting with Two Parallel Streams** <br>
-_**Zhilin Huang**, Chujun Qin, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
-``[arXiv:2111.03414]`` <br>
-[[paper]](https://arxiv.org/abs/2111.03414)
-
-****
