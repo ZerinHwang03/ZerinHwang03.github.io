@@ -43,8 +43,8 @@ Papers
 _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Chujun Qin, Yijie Yu, Xiawu Zheng, Zikun Zhou, Wentao Zhang, Yu Wang, Wenming Yang_ <br>
 ``[Under Review]`` <br>
 
-**Bilateral Event Mining and Complementary for Event Stream Super-Resolution** <br>
-_**Zhilin Huang***, Quanmin Liang*, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_ <br>
+**Efficient Event Stream Super-Resolution with Recursive Multi-Branch Fusion** <br>
+_Quanmin Liang*, **Zhilin Huang***, Xiawu Zheng, Feidiao Yang, Jun Peng, Kai Huang, Yonghong Tian_ <br>
 ``[Under Review]`` <br>
 
 **Graphusion: Latent Diffusion for Graph Generation** <br>
