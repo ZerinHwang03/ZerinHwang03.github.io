@@ -41,66 +41,66 @@ Papers
 
 **Interaction-based Retrieval-augmented Diffusion Models for Protein-specific 3D Molecule Generation** <br>
 _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Chujun Qin, Yijie Yu, Xiawu Zheng, Zikun Zhou, Wentao Zhang, Yu Wang, Wenming Yang_ <br>
-``[Under Review]`` <br>
+<font color=red> [Under Review] </font> <br>
 
 **Efficient Event Stream Super-Resolution with Recursive Multi-Branch Fusion** <br>
 _Quanmin Liang*, **Zhilin Huang***, Xiawu Zheng, Feidiao Yang, Jun Peng, Kai Huang, Yonghong Tian_ <br>
-``[Under Review]`` <br>
+<font color=red> [Under Review] </font> <br>
 
 **Graphusion: Latent Diffusion for Graph Generation** <br>
 _Ling Yang*, **Zhilin Huang***, Zhilong Zhang, Zhongyi Liu, Shenda Hong, Wentao Zhang, Wenming Yang, Bin Cui, Luxia Zhang_ <br>
-``[Under Review]`` <br>
+<font color=red> [Under Review] </font> <br>
 
 **Bilateral Event Mining and Complementary for Event Stream Super-Resolution** <br>
 _**Zhilin Huang***, Quanmin Liang*, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_ <br>
-``[CVPR 2024]`` <br>
+<font color=red> [CVPR 2024] </font> <br>
 
 **Protein-Ligand Interaction Prior for Binding-aware 3D Molecule Diffusion Models** <br>
 _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Zhilong Zhang, Wentao Zhang, Xiawu Zheng, Jie Chen, Yu Wang, Bin Cui, Wenming Yang_ <br>
-``[ICLR 2024]`` <br>
+<font color=red> [ICLR 2024] </font> <br>
 [[paper]](https://openreview.net/forum?id=qH9nrMNTIW) [[code]](https://github.com/YangLing0818/IPDiff)
 
 **Binding-Adaptive Diffusion Models for Structure-Based Drug Design** <br>
 _**Zhilin Huang***, Ling Yang*, Zaixi Zhang, Xiangxin Zhou, Yu Bao, Xiawu Zheng, Yuwei Yang, Yu Wang, Wenming Yang_ <br>
-``[AAAI 2024]`` <br>
+<font color=red> [AAAI 2024] </font> <br>
 [[code]](https://github.com/YangLing0818/BindDM)
 
 **Improving diffusion-based image synthesis with context prediction** <br>
 _Ling Yang, Jingwei Liu, Shenda Hong, Zhilong Zhang, **Zhilin Huang**, Zheming Cai, Wentao Zhang, Bin Cui_ <br>
-``[NIPS 2023]`` <br>
+<font color=red> [NIPS 2023] </font> <br>
 [[paper]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/7664a7e946a84ac5e97649a967717cf2-Abstract-Conference.html)
 
 **Individual and Structural Graph Information Bottlenecks for Out-of-Distribution Generalization** <br>
 _Ling Yang, Jiayi Zheng, Heyuan Wang, Zhongyi Liu, **Zhilin Huang**, Shenda Hong, Wentao Zhang, Bin Cui_ <br>
-``[TKDE 2023]`` <br> 
+<font color=red> [TKDE 2023] </font> <br>
 [[paper]](https://ieeexplore.ieee.org/abstract/document/10168296)
 
 **Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
 _Ling Yang*, **Zhilin Huang***, Yang Song, Shenda Hong, Guohao Li, Wentao Zhang, Bin Cui, Bernard Ghanem, Ming-Hsuan Yang_ <br> 
-``[arXiv:2211.11138] 2022`` <br> 
+<font color=red> [arXiv:2211.11138] </font> <br>
 [[paper]](https://arxiv.org/abs/2211.11138) [[code]](https://github.com/YangLing0818/SGDiff)
 
 **Region-aware Attention for Image Inpainting** <br>
 _**Zhilin Huang**, Chujun Qin, Zhenyu Weng, Yuesheng Zhu_ <br>
-``[arXiv:2204.01004] 2022`` <br> 
+<font color=red> [arXiv:2204.01004] </font> <br>
 [[paper]](https://arxiv.org/abs/2204.01004)
 
 **Structure-aware Image Inpainting with Two Parallel Streams** <br>
 _**Zhilin Huang**, Chujun Qin, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
-``[arXiv:2111.03414] 2021`` <br>
+<font color=red> [arXiv:2111.03414] </font> <br>
 [[paper]](https://arxiv.org/abs/2111.03414)
 
 **Semantic-aware Context Aggregation for Image Inpainting** <br>
 _**Zhilin Huang***, Chujun Qin*, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
-``[ICASSP 2021]`` <br> 
+<font color=red> [ICASSP 2021] </font> <br>
 [[paper]](https://ieeexplore.ieee.org/abstract/document/9414065)
 
 **Confidence-based Global Attention Guided Network for Image Inpainting** <br>
 _**Zhilin Huang**, Chujun Qin, Lei Li, Ruixin Liu, Yuesheng Zhu_ <br>
-``[MMM 2021]`` <br> 
+<font color=red> [MMM 2021] </font> <br>
 [[paper]](https://link.springer.com/chapter/10.1007/978-3-030-67832-6_17)
 
 **Bi-encoder Network with Structure-texture Consistency for Image Inpainting** <br>
 _Chujun Qin, **Zhilin Huang**, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
-``[IJCNN 2021]`` <br> 
+<font color=red> [IJCNN 2021] </font> <br>
 [[paper]](https://ieeexplore.ieee.org/abstract/document/9534475)
