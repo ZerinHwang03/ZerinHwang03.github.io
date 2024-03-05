@@ -68,15 +68,15 @@ _Ling Yang, Jingwei Liu, Shenda Hong, Zhilong Zhang, **Zhilin Huang**, Zheming C
 _Ling Yang, Jiayi Zheng, Heyuan Wang, Zhongyi Liu, **Zhilin Huang**, Shenda Hong, Wentao Zhang, Bin Cui_ <br>
 [[paper]](https://ieeexplore.ieee.org/abstract/document/10168296) <br>
 
-**<font color=red> [arXiv:2211.11138] </font> Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
+**<font color=red> [arXiv 2022] </font> Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
 _Ling Yang*, **Zhilin Huang***, Yang Song, Shenda Hong, Guohao Li, Wentao Zhang, Bin Cui, Bernard Ghanem, Ming-Hsuan Yang_ <br>
 [[paper]](https://arxiv.org/abs/2211.11138) [[code]](https://github.com/YangLing0818/SGDiff) <br>
 
-**<font color=red> [arXiv:2204.01004] </font> Region-aware Attention for Image Inpainting** <br>
+**<font color=red> [arXiv 2022] </font> Region-aware Attention for Image Inpainting** <br>
 _**Zhilin Huang**, Chujun Qin, Zhenyu Weng, Yuesheng Zhu_ <br>
 [[paper]](https://arxiv.org/abs/2204.01004) <br>
 
-**<font color=red> [arXiv:2111.03414] </font> Structure-aware Image Inpainting with Two Parallel Streams** <br>
+**<font color=red> [arXiv 2021] </font> Structure-aware Image Inpainting with Two Parallel Streams** <br>
 _**Zhilin Huang**, Chujun Qin, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
 [[paper]](https://arxiv.org/abs/2111.03414) <br>
 
