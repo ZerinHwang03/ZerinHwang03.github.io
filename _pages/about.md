@@ -39,16 +39,6 @@ Papers
 ======
 ***: equal contribution.**
 
-**<font color=red> [Under Review] </font> Interaction-based Retrieval-augmented Diffusion Models for Protein-specific 3D Molecule Generation** <br>
-_**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Chujun Qin, Yijie Yu, Xiawu Zheng, Zikun Zhou, Wentao Zhang, Yu Wang, Wenming Yang_ <br>
-
-
-**<font color=red> [Under Review] </font> Efficient Event Stream Super-Resolution with Recursive Multi-Branch Fusion** <br>
-_Quanmin Liang*, **Zhilin Huang***, Xiawu Zheng, Feidiao Yang, Jun Peng, Kai Huang, Yonghong Tian_ <br>
-
-**<font color=red> [Under Review] </font> Graphusion: Latent Diffusion for Graph Generation** <br>
-_Ling Yang*, **Zhilin Huang***, Zhilong Zhang, Zhongyi Liu, Shenda Hong, Wentao Zhang, Wenming Yang, Bin Cui, Luxia Zhang_ <br>
-
 **<font color=red> [CVPR 2024] </font> Bilateral Event Mining and Complementary for Event Stream Super-Resolution** <br>
 _**Zhilin Huang***, Quanmin Liang*, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_ <br>
 
