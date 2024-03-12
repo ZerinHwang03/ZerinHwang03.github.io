@@ -39,45 +39,56 @@ Papers
 ======
 ***: equal contribution.**
 
-**<font color=red> [CVPR 2024] </font> Bilateral Event Mining and Complementary for Event Stream Super-Resolution** <br>
+![Static Badge](https://img.shields.io/badge/CVPR%202024-CCFA-red)
+**Bilateral Event Mining and Complementary for Event Stream Super-Resolution** <br>
 _**Zhilin Huang***, Quanmin Liang*, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_ <br>
 
-**<font color=red> [ICLR 2024] </font> Protein-Ligand Interaction Prior for Binding-aware 3D Molecule Diffusion Models** <br>
+![Static Badge](https://img.shields.io/badge/ICLR%202024-red)
+**Protein-Ligand Interaction Prior for Binding-aware 3D Molecule Diffusion Models** <br>
 _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Zhilong Zhang, Wentao Zhang, Xiawu Zheng, Jie Chen, Yu Wang, Bin Cui, Wenming Yang_ <br>
 [[paper]](https://openreview.net/forum?id=qH9nrMNTIW) [[code]](https://github.com/YangLing0818/IPDiff) <br>
 
-**<font color=red> [AAAI 2024] </font> Binding-Adaptive Diffusion Models for Structure-Based Drug Design** <br>
+![Static Badge](https://img.shields.io/badge/AAAI%202024-CCFA-red)
+**Binding-Adaptive Diffusion Models for Structure-Based Drug Design** <br>
 _**Zhilin Huang***, Ling Yang*, Zaixi Zhang, Xiangxin Zhou, Yu Bao, Xiawu Zheng, Yuwei Yang, Yu Wang, Wenming Yang_ <br>
 [[paper]](https://arxiv.org/abs/2402.18583) [[code]](https://github.com/YangLing0818/BindDM) <br>
 
-**<font color=red> [NIPS 2023] </font> Improving diffusion-based image synthesis with context prediction** <br>
+![Static Badge](https://img.shields.io/badge/NIPS%202023-CCFA-red)
+**Improving diffusion-based image synthesis with context prediction** <br>
 _Ling Yang, Jingwei Liu, Shenda Hong, Zhilong Zhang, **Zhilin Huang**, Zheming Cai, Wentao Zhang, Bin Cui_ <br>
 [[paper]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/7664a7e946a84ac5e97649a967717cf2-Abstract-Conference.html) <br>
 
-**<font color=red> [TKDE 2023] </font> Individual and Structural Graph Information Bottlenecks for Out-of-Distribution Generalization** <br>
+![Static Badge](https://img.shields.io/badge/TKDE%202023-CCFA-red)
+**Individual and Structural Graph Information Bottlenecks for Out-of-Distribution Generalization** <br>
 _Ling Yang, Jiayi Zheng, Heyuan Wang, Zhongyi Liu, **Zhilin Huang**, Shenda Hong, Wentao Zhang, Bin Cui_ <br>
 [[paper]](https://ieeexplore.ieee.org/abstract/document/10168296) <br>
 
-**<font color=red> [arXiv 2022] </font> Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
+![Static Badge](https://img.shields.io/badge/arXiv%202022-2211.11138-red)
+**Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
 _Ling Yang*, **Zhilin Huang***, Yang Song, Shenda Hong, Guohao Li, Wentao Zhang, Bin Cui, Bernard Ghanem, Ming-Hsuan Yang_ <br>
 [[paper]](https://arxiv.org/abs/2211.11138) [[code]](https://github.com/YangLing0818/SGDiff) <br>
 
-**<font color=red> [arXiv 2022] </font> Region-aware Attention for Image Inpainting** <br>
+![Static Badge](https://img.shields.io/badge/arXiv%202022-2204.01004-red)
+**Region-aware Attention for Image Inpainting** <br>
 _**Zhilin Huang**, Chujun Qin, Zhenyu Weng, Yuesheng Zhu_ <br>
 [[paper]](https://arxiv.org/abs/2204.01004) <br>
 
-**<font color=red> [arXiv 2021] </font> Structure-aware Image Inpainting with Two Parallel Streams** <br>
+![Static Badge](https://img.shields.io/badge/arXiv%202021-2111.03414-red)
+**Structure-aware Image Inpainting with Two Parallel Streams** <br>
 _**Zhilin Huang**, Chujun Qin, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
 [[paper]](https://arxiv.org/abs/2111.03414) <br>
 
-**<font color=red> [ICASSP 2021] </font> Semantic-aware Context Aggregation for Image Inpainting** <br>
+![Static Badge](https://img.shields.io/badge/ICASSP%202021-CCFB-red)
+**Semantic-aware Context Aggregation for Image Inpainting** <br>
 _**Zhilin Huang***, Chujun Qin*, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
 [[paper]](https://ieeexplore.ieee.org/abstract/document/9414065) <br>
 
-**<font color=red> [MMM 2021] </font> Confidence-based Global Attention Guided Network for Image Inpainting** <br>
+![Static Badge](https://img.shields.io/badge/MMM%202021-CCFC-red)
+**Confidence-based Global Attention Guided Network for Image Inpainting** <br>
 _**Zhilin Huang**, Chujun Qin, Lei Li, Ruixin Liu, Yuesheng Zhu_ <br>
 [[paper]](https://link.springer.com/chapter/10.1007/978-3-030-67832-6_17) <br>
 
-**<font color=red> [IJCNN 2021] </font> Bi-encoder Network with Structure-texture Consistency for Image Inpainting** <br>
+![Static Badge](https://img.shields.io/badge/IJCNN%202021-CCFC-red)
+**Bi-encoder Network with Structure-texture Consistency for Image Inpainting** <br>
 _Chujun Qin, **Zhilin Huang**, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
 [[paper]](https://ieeexplore.ieee.org/abstract/document/9534475)
