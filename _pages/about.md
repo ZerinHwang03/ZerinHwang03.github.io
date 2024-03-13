@@ -14,6 +14,12 @@ Zhilin Huang received his B.S. from the School of Electronics and Information En
 
 ****
 
+Research Interests
+======
+AI for Science, Computer Vision, Self-supervised Learning
+
+****
+
 Education
 ======
 **Ph.D.**, **Tsinghua University**<br>
