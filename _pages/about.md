@@ -45,8 +45,12 @@ Papers
 ======
 ***: equal contribution.**
 
+![Static Badge](https://img.shields.io/badge/TKDE%202024-CCF%20A-red)
+**Graphusion: Latent Diffusion for Graph Generation** <br>
+_Ling Yang*, **Zhilin Huang***, Zhilong Zhang, Zhongyi Liu, Shenda Hong, Wentao Zhang, Wenming Yang, Bin Cui, Luxia Zhang_ <br>
+
 ![Static Badge](https://img.shields.io/badge/CVPR%202024-CCF%20A-red)
-**Bilateral Event Mining and Complementary for Event Stream Super-Resolution** <br>
+**Bilateral Event Mining and Complementary for Event Stream Super-Resolution (Oral)** <br>
 _**Zhilin Huang***, Quanmin Liang*, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_ <br>
 [[code]](https://github.com/Lqm26/BMCNet-ESR) <br>
 
