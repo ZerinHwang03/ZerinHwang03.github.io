@@ -59,7 +59,7 @@ _Quanmin Liang*, **Zhilin Huang***, Xiawu Zheng, Feidiao Yang, Jun Peng, Kai Hua
 
 ![Static Badge](https://img.shields.io/badge/TKDE%202024-CCF%20A-red)
 **Graphusion: Latent Diffusion for Graph Generation** <br>
-_Ling Yang*, **Zhilin Huang***, Zhilong Zhang, Zhongyi Liu, Shenda Hong, Wentao Zhang, Wenming Yang, Bin Cui, Luxia Zhang_ <br>
+_Ling Yang, **Zhilin Huang**, Zhilong Zhang, Zhongyi Liu, Shenda Hong, Wentao Zhang, Wenming Yang, Bin Cui, Luxia Zhang_ <br>
 
 ![Static Badge](https://img.shields.io/badge/CVPR%202024-CCF%20A-red)
 **Bilateral Event Mining and Complementary for Event Stream Super-Resolution (Oral)** <br>
