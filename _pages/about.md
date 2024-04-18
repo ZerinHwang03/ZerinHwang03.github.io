@@ -44,13 +44,13 @@ Self-supervised Learning, Multi-modal Learning
 News
 ======
 
-- 04/2024, one paper is accepted to **IJCAI 2024**.
+- 04/2024, **one** paper is accepted to **IJCAI 2024**.
 
-- 02/2024, one paper is accepted to **CVPR 2024 (oral)**.
+- 02/2024, **one** paper is accepted to **CVPR 2024 (oral)**.
 
-- 01/2024, one paper is accepted to **ICLR 2024**.
+- 01/2024, **one** paper is accepted to **ICLR 2024**.
 
-- 12/2023, one paper is accepted to **AAAI 2024**.
+- 12/2023, **one** paper is accepted to **AAAI 2024**.
 
 ****
 
