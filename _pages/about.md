@@ -41,13 +41,26 @@ Self-supervised Learning, Multi-modal Learning
 
 ****
 
+News
+======
+
+- 04/2024, one paper is accepted to **IJCAI 2024**.
+
+- 02/2024, one paper is accepted to **CVPR 2024 (oral)**.
+
+- 01/2024, one paper is accepted to **ICLR 2024**.
+
+- 12/2023, one paper is accepted to **AAAI 2024**.
+
+****
+
 Papers
 ======
 ***: equal contribution.**
 
 ![Static Badge](https://img.shields.io/badge/Under%20Review-%20)
 **Motion-aware Latent Diffusion Models for Video Frame Interpolation** <br>
-_**Zhilin Huang***, Yijie Yu*, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Zikun Zhou, Wenming Yang_ <br>
+_**Zhilin Huang***, Yijie Yu*, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Zikun Zhou, Yaowei Wang, Wenming Yang_ <br>
 
 ![Static Badge](https://img.shields.io/badge/Under%20Review-%20)
 **Interaction-based Retrieval-augmented Diffusion Models for Protein-specific 3D Molecule Generation** <br>
