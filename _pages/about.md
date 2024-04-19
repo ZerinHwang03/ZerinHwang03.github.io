@@ -46,7 +46,7 @@ News
 
 - 04/2024, **1** paper is accepted to **IJCAI 2024**
 
-- 02/2024, **1** paper is accepted to **CVPR 2024 (oral)**
+- 02/2024, **1** paper is accepted to **CVPR 2024 (Oral)**
 
 - 01/2024, **1** paper is accepted to **ICLR 2024**
 
