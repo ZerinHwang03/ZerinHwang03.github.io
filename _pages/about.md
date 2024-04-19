@@ -56,7 +56,8 @@ News
 
 Papers
 ======
-***: equal contribution.**
+
+**First author or \*Equal contribution:**
 
 ![Static Badge](https://img.shields.io/badge/Under%20Review-%20)
 **Motion-aware Latent Diffusion Models for Video Frame Interpolation** <br>
@@ -69,10 +70,6 @@ _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Chujun Qin, Yijie Yu, Xiawu Zheng
 ![Static Badge](https://img.shields.io/badge/IJCAI%202024-CCF%20A-red)
 **Efficient Event Stream Super-Resolution with Recursive Multi-Branch Fusion** <br>
 _Quanmin Liang*, **Zhilin Huang***, Xiawu Zheng, Feidiao Yang, Jun Peng, Kai Huang, Yonghong Tian_ <br>
-
-![Static Badge](https://img.shields.io/badge/TKDE%202024-CCF%20A-red)
-**Graphusion: Latent Diffusion for Graph Generation** <br>
-_Ling Yang, **Zhilin Huang**, Zhilong Zhang, Zhongyi Liu, Shenda Hong, Wentao Zhang, Wenming Yang, Bin Cui, Luxia Zhang_ <br>
 
 ![Static Badge](https://img.shields.io/badge/CVPR%202024-CCF%20A-red)
 **Bilateral Event Mining and Complementary for Event Stream Super-Resolution (Oral)** <br>
@@ -88,16 +85,6 @@ _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Zhilong Zhang, Wentao Zhang, Xiaw
 **Binding-Adaptive Diffusion Models for Structure-Based Drug Design** <br>
 _**Zhilin Huang***, Ling Yang*, Zaixi Zhang, Xiangxin Zhou, Yu Bao, Xiawu Zheng, Yuwei Yang, Yu Wang, Wenming Yang_ <br>
 [[paper]](https://arxiv.org/abs/2402.18583) [[code]](https://github.com/YangLing0818/BindDM) <br>
-
-![Static Badge](https://img.shields.io/badge/NIPS%202023-CCF%20A-red)
-**Improving diffusion-based image synthesis with context prediction** <br>
-_Ling Yang, Jingwei Liu, Shenda Hong, Zhilong Zhang, **Zhilin Huang**, Zheming Cai, Wentao Zhang, Bin Cui_ <br>
-[[paper]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/7664a7e946a84ac5e97649a967717cf2-Abstract-Conference.html) <br>
-
-![Static Badge](https://img.shields.io/badge/TKDE%202023-CCF%20A-red)
-**Individual and Structural Graph Information Bottlenecks for Out-of-Distribution Generalization** <br>
-_Ling Yang, Jiayi Zheng, Heyuan Wang, Zhongyi Liu, **Zhilin Huang**, Shenda Hong, Wentao Zhang, Bin Cui_ <br>
-[[paper]](https://ieeexplore.ieee.org/abstract/document/10168296) <br>
 
 ![Static Badge](https://img.shields.io/badge/arXiv%202022-2211.11138-red)
 **Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
@@ -123,6 +110,22 @@ _**Zhilin Huang***, Chujun Qin*, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
 **Confidence-based Global Attention Guided Network for Image Inpainting** <br>
 _**Zhilin Huang**, Chujun Qin, Lei Li, Ruixin Liu, Yuesheng Zhu_ <br>
 [[paper]](https://link.springer.com/chapter/10.1007/978-3-030-67832-6_17) <br>
+
+**Other collaborations:**
+
+![Static Badge](https://img.shields.io/badge/TKDE%202024-CCF%20A-red)
+**Graphusion: Latent Diffusion for Graph Generation** <br>
+_Ling Yang, **Zhilin Huang**, Zhilong Zhang, Zhongyi Liu, Shenda Hong, Wentao Zhang, Wenming Yang, Bin Cui, Luxia Zhang_ <br>
+
+![Static Badge](https://img.shields.io/badge/NIPS%202023-CCF%20A-red)
+**Improving diffusion-based image synthesis with context prediction** <br>
+_Ling Yang, Jingwei Liu, Shenda Hong, Zhilong Zhang, **Zhilin Huang**, Zheming Cai, Wentao Zhang, Bin Cui_ <br>
+[[paper]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/7664a7e946a84ac5e97649a967717cf2-Abstract-Conference.html) <br>
+
+![Static Badge](https://img.shields.io/badge/TKDE%202023-CCF%20A-red)
+**Individual and Structural Graph Information Bottlenecks for Out-of-Distribution Generalization** <br>
+_Ling Yang, Jiayi Zheng, Heyuan Wang, Zhongyi Liu, **Zhilin Huang**, Shenda Hong, Wentao Zhang, Bin Cui_ <br>
+[[paper]](https://ieeexplore.ieee.org/abstract/document/10168296) <br>
 
 ![Static Badge](https://img.shields.io/badge/IJCNN%202021-CCF%20C-red)
 **Bi-encoder Network with Structure-texture Consistency for Image Inpainting** <br>
