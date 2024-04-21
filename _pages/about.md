@@ -35,7 +35,12 @@ _2015.09 - 2019.07_
 
 Research Experience
 ======
-**Research Intern**, **ByteDance AI-Lab** <br>
+
+**Joint Ph.D. Student**, **Peng Cheng Laboratory**, **Shenzhen** <br>
+_2022.09 - present_<br>
+AI for Scicence, Computer Vision
+
+**Research Intern**, **AI-Lab, ByteDance**, **Beijing** <br>
 _2021.04 - 2021.11_<br>
 Self-supervised Learning, Multi-modal Learning
 
