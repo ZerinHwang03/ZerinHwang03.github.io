@@ -38,7 +38,7 @@ Research Experience
 
 **Joint Ph.D. Student**, **Peng Cheng Laboratory**, **Shenzhen** <br>
 _2022.09 - present_<br>
-AI for Scicence, Computer Vision
+AI for Science, Computer Vision
 
 **Research Intern**, **AI-Lab, ByteDance**, **Beijing** <br>
 _2021.04 - 2021.11_<br>
