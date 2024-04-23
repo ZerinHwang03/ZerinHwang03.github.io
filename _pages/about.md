@@ -65,12 +65,13 @@ Papers
 **First author or \*Equal contribution:**
 
 ![Static Badge](https://img.shields.io/badge/Under%20Review-%20)
-**Motion-aware Latent Diffusion Models for Video Frame Interpolation** <br>
-_**Zhilin Huang***, Yijie Yu*, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Zikun Zhou, Yaowei Wang, Wenming Yang_ <br>
-
-![Static Badge](https://img.shields.io/badge/Under%20Review-%20)
 **Interaction-based Retrieval-augmented Diffusion Models for Protein-specific 3D Molecule Generation** <br>
 _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Chujun Qin, Yijie Yu, Xiawu Zheng, Zikun Zhou, Wentao Zhang, Yu Wang, Wenming Yang_ <br>
+
+![Static Badge](https://img.shields.io/badge/arXiv%202024-2404.13534-red)
+**Motion-aware Latent Diffusion Models for Video Frame Interpolation** <br>
+_**Zhilin Huang***, Yijie Yu*, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Zikun Zhou, Yaowei Wang, Wenming Yang_ <br>
+[[paper]](https://arxiv.org/abs/2404.13534) <br>
 
 ![Static Badge](https://img.shields.io/badge/IJCAI%202024-CCF%20A-red)
 **Efficient Event Stream Super-Resolution with Recursive Multi-Branch Fusion** <br>
