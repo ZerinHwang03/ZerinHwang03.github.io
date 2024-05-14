@@ -14,6 +14,8 @@ Zhilin Huang received his B.S. from the School of Electronics and Information En
 
 ****
 
+
+
 🔭 Research Interests
 ======
 AI for Science, Computer Vision, Self-supervised Learning
@@ -44,6 +46,8 @@ Self-supervised Learning, Multi-modal Learning
 
 🔥 News
 ======
+
+📢 **I am looking for internship oppotunity, please feel free to contact me if you are interested in my research!**
 
 - 05/2024, **1** paper is accepted to **ICML 2024**
 
@@ -136,3 +140,12 @@ _Ling Yang, Jiayi Zheng, Heyuan Wang, Zhongyi Liu, **Zhilin Huang**, Shenda Hong
 **Bi-encoder Network with Structure-texture Consistency for Image Inpainting** <br>
 _Chujun Qin, **Zhilin Huang**, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
 [[paper]](https://ieeexplore.ieee.org/abstract/document/9534475)
+
+****
+
+📮 Contact Me
+======
+- **Email**: zerinhwang03@pku.edu.cn
+- **WeChat**: zerinhwang03
+
+
