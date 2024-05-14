@@ -8,19 +8,19 @@ redirect_from:
 ---
 
 
-Biography
+🧑‍🎓 Biography
 ======
 Zhilin Huang received his B.S. from the School of Electronics and Information Engineering, Harbin Institute of Technology in 2019. He received his M.S. from the School of Electronic and Computer Engineering, Peking University in 2022. He is currently a Ph.D. student in Tsinghua University. His research interests include computer vision, self-supervised learning, ai for science.
 
 ****
 
-Research Interests
+🔭 Research Interests
 ======
 AI for Science, Computer Vision, Self-supervised Learning
 
 ****
 
-Education
+🎓 Education
 ======
 **Ph.D.**, **Tsinghua University**<br>
 Information and Communication Engineering, _2022.09 - present_
@@ -33,7 +33,7 @@ Communication Engineering, _2015.09 - 2019.07_
 
 ****
 
-Research Experience
+💼 Research Experience
 ======
 
 **Research Intern**, **AI-Lab, ByteDance**, **Beijing** <br>
@@ -42,7 +42,7 @@ Self-supervised Learning, Multi-modal Learning
 
 ****
 
-News
+🔥 News
 ======
 
 - 05/2024, **1** paper is accepted to **ICML 2024**
@@ -57,7 +57,7 @@ News
 
 ****
 
-Papers
+📝 Papers
 ======
 
 **First author or \*Equal contribution:**
