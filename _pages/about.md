@@ -23,13 +23,13 @@ AI for Science, Computer Vision, Self-supervised Learning
 Education
 ======
 **Ph.D.**, **Tsinghua University**<br>
-_2022.09 - present_
+Information and Communication Engineering, _2022.09 - present_
 
 **M.S.**, **Peking University** <br>
-_2019.09 - 2022.07_ 
+Computer Application Technology, _2019.09 - 2022.07_ 
 
 **B.S.**, **Harbin Institute of Technology**<br>
-_2015.09 - 2019.07_ 
+Communication Engineering, _2015.09 - 2019.07_ 
 
 ****
 
