@@ -71,7 +71,6 @@ Self-supervised Learning, Multi-modal Learning
 _**Zhilin Huang***, Yijie Yu*, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Zikun Zhou, Yaowei Wang, Wenming Yang_ <br>
 [[paper]](https://arxiv.org/abs/2404.13534) <br>
 
-
 ![Static Badge](https://img.shields.io/badge/ICML%202024-CCF%20A-red)
 **Interaction-based Retrieval-augmented Diffusion Models for Protein-specific 3D Molecule Generation** <br>
 _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Chujun Qin, Yijie Yu, Xiawu Zheng, Zikun Zhou, Wentao Zhang, Yu Wang, Wenming Yang_ <br>
@@ -83,7 +82,7 @@ _Quanmin Liang*, **Zhilin Huang***, Xiawu Zheng, Feidiao Yang, Jun Peng, Kai Hua
 ![Static Badge](https://img.shields.io/badge/CVPR%202024-CCF%20A-red)
 **Bilateral Event Mining and Complementary for Event Stream Super-Resolution (Oral)** <br>
 _**Zhilin Huang***, Quanmin Liang*, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_ <br>
-[[code]](https://github.com/Lqm26/BMCNet-ESR) <br>
+[[paper]](http://arxiv.org/abs/2405.10037) [[code]](https://github.com/Lqm26/BMCNet-ESR) <br>
 
 ![Static Badge](https://img.shields.io/badge/ICLR%202024-CCF%20NULL-red)
 **Protein-Ligand Interaction Prior for Binding-aware 3D Molecule Diffusion Models** <br>
