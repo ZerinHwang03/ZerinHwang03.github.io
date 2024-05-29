@@ -47,7 +47,7 @@ Self-supervised Learning, Multi-modal Learning
 🔥 News
 ======
 
-📢 **I am looking for internship oppotunity, please feel free to contact me if you are interested in my research!**
+📢 **I am looking for an internship, please feel free to contact me if you are interested in my research!**
 
 - 05/2024, **1** paper is accepted to **ICML 2024**
 
