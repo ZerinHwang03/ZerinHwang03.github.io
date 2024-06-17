@@ -72,6 +72,7 @@ _**Zhilin Huang***, Yijie Yu*, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Z
 ![Static Badge](https://img.shields.io/badge/ICML%202024-CCF%20A-red)
 **Interaction-based Retrieval-augmented Diffusion Models for Protein-specific 3D Molecule Generation** <br>
 _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Chujun Qin, Yijie Yu, Xiawu Zheng, Zikun Zhou, Wentao Zhang, Yu Wang, Wenming Yang_ <br>
+[[paper]](https://openreview.net/pdf?id=eejhD9FCP3)
 
 ![Static Badge](https://img.shields.io/badge/IJCAI%202024-CCF%20A-red)
 **Efficient Event Stream Super-Resolution with Recursive Multi-Branch Fusion** <br>
