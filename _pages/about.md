@@ -10,7 +10,7 @@ redirect_from:
 
 🧑‍🎓 Biography
 ======
-Zhilin Huang received his B.S. from the School of Electronics and Information Engineering, Harbin Institute of Technology in 2019. He received his M.S. from the School of Electronic and Computer Engineering, Peking University in 2022. He is currently a Ph.D. student in Tsinghua University. His research interests include computer vision, self-supervised learning, ai for science.
+I am currently a Ph.D. student in Shenzhen International Graduate School, Tsinghua University. I received my B.S. in the School of Electronics and Information Engineering, Harbin Institute of Technology in 2019. I received my M.S. in the School of Electronic and Computer Engineering, Peking University in 2022. My research interests encompass Computer Vision, Self-supervised Learning, AI for Science.
 
 ****
 
@@ -18,7 +18,7 @@ Zhilin Huang received his B.S. from the School of Electronics and Information En
 
 🔭 Research Interests
 ======
-AI for Science, Computer Vision, Self-supervised Learning
+Computer Vision, Self-supervised Learning, AI for Science
 
 ****
 
