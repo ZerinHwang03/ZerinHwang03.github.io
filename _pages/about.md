@@ -66,7 +66,7 @@ Self-supervised Learning, Multi-modal Learning
 
 ![Static Badge](https://img.shields.io/badge/arXiv%202024-2404.13534-red)
 **Motion-aware Latent Diffusion Models for Video Frame Interpolation** <br>
-_**Zhilin Huang***, Yijie Yu*, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Zikun Zhou, Yaowei Wang, Wenming Yang_ <br>
+_**Zhilin Huang**, Yijie Yu, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Zikun Zhou, Yaowei Wang, Wenming Yang_ <br>
 [[paper]](https://arxiv.org/abs/2404.13534) <br>
 
 ![Static Badge](https://img.shields.io/badge/ICML%202024-CCF%20A-red)
