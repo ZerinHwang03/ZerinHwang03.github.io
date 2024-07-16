@@ -47,6 +47,8 @@ Self-supervised Learning, Multi-modal Learning
 🔥 News
 ======
 
+- 07/2024, **1** paper is accepted to **ACM MM 2024**
+
 - 05/2024, **1** paper is accepted to **ICML 2024**
 
 - 04/2024, **1** paper is accepted to **IJCAI 2024**
@@ -64,7 +66,7 @@ Self-supervised Learning, Multi-modal Learning
 
 **First author or \*Equal contribution:**
 
-![Static Badge](https://img.shields.io/badge/arXiv%202024-2404.13534-red)
+![Static Badge](https://img.shields.io/badge/ACM%20MM%202024-CCF%20A-red)
 **Motion-aware Latent Diffusion Models for Video Frame Interpolation** <br>
 _**Zhilin Huang**, Yijie Yu, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Zikun Zhou, Yaowei Wang, Wenming Yang_ <br>
 [[paper]](https://arxiv.org/abs/2404.13534) <br>
