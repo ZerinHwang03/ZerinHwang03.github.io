@@ -10,7 +10,7 @@ redirect_from:
 
 🧑‍🎓 Biography
 ======
-I am currently a Ph.D. student in Shenzhen International Graduate School, Tsinghua University. I received my B.S. in the School of Electronics and Information Engineering, Harbin Institute of Technology in 2019. I received my M.S. in the School of Electronic and Computer Engineering, Peking University in 2022. My research interests encompass Computer Vision, Self-supervised Learning, AI for Science.
+I am currently a Ph.D. student in Shenzhen International Graduate School, Tsinghua University. I received my B.S. in the School of Electronics and Information Engineering, Harbin Institute of Technology in 2019. I received my M.S. in the School of Electronic and Computer Engineering, Peking University in 2022. My research interests encompass Computer Vision, Embodied AI, AI for Science and Self-supervised Learning.
 
 ****
 
@@ -18,7 +18,7 @@ I am currently a Ph.D. student in Shenzhen International Graduate School, Tsingh
 
 🔭 Research Interests
 ======
-Computer Vision, Self-supervised Learning, AI for Science
+Computer Vision, Embodied AI, AI for Science, Self-supervised Learning
 
 ****
 
@@ -47,17 +47,17 @@ Self-supervised Learning, Multi-modal Learning
 🔥 News
 ======
 
-- 07/2024, **1** paper is accepted to **ACM MM 2024**
+- 07/2024, **1** paper is accepted by **ACM MM 2024**
 
-- 05/2024, **1** paper is accepted to **ICML 2024**
+- 05/2024, **1** paper is accepted by **ICML 2024**
 
-- 04/2024, **1** paper is accepted to **IJCAI 2024**
+- 04/2024, **1** paper is accepted by **IJCAI 2024**
 
-- 02/2024, **1** paper is accepted to **CVPR 2024 (Oral)**
+- 02/2024, **1** paper is accepted by **CVPR 2024 (Oral)**
 
-- 01/2024, **1** paper is accepted to **ICLR 2024**
+- 01/2024, **1** paper is accepted by **ICLR 2024**
 
-- 12/2023, **1** paper is accepted to **AAAI 2024**
+- 12/2023, **1** paper is accepted by **AAAI 2024**
 
 ****
 
