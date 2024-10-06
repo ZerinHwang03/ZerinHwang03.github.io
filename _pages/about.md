@@ -74,11 +74,12 @@ _**Zhilin Huang**, Yijie Yu, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Zik
 ![Static Badge](https://img.shields.io/badge/ICML%202024-CCF%20A-red)
 **Interaction-based Retrieval-augmented Diffusion Models for Protein-specific 3D Molecule Generation** <br>
 _**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Chujun Qin, Yijie Yu, Xiawu Zheng, Zikun Zhou, Wentao Zhang, Yu Wang, Wenming Yang_ <br>
-[[paper]](https://openreview.net/pdf?id=eejhD9FCP3)
+[[paper]](https://openreview.net/pdf?id=eejhD9FCP3) [[code]](https://openreview.net/forum?id=eejhD9FCP3) <br>
 
 ![Static Badge](https://img.shields.io/badge/IJCAI%202024-CCF%20A-red)
 **Efficient Event Stream Super-Resolution with Recursive Multi-Branch Fusion** <br>
 _Quanmin Liang*, **Zhilin Huang***, Xiawu Zheng, Feidiao Yang, Jun Peng, Kai Huang, Yonghong Tian_ <br>
+[[paper]](https://www.ijcai.org/proceedings/2024/0119.pdf) [[code]](https://github.com/Lqm26/RMFNet) <br>
 
 ![Static Badge](https://img.shields.io/badge/CVPR%202024-CCF%20A-red)
 **Bilateral Event Mining and Complementary for Event Stream Super-Resolution (Oral)** <br>
