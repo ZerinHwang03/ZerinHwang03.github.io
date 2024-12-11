@@ -73,7 +73,7 @@ _**Zhilin Huang**, Yijie Yu, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Zik
 
 ![Static Badge](https://img.shields.io/badge/ICML%202024-CCF%20A-red)
 **Interaction-based Retrieval-augmented Diffusion Models for Protein-specific 3D Molecule Generation** <br>
-_**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Chujun Qin, Yijie Yu, Xiawu Zheng, Zikun Zhou, Wentao Zhang, Yu Wang, Wenming Yang_ <br>
+_**Zhilin Huang**, Ling Yang, Xiangxin Zhou, Chujun Qin, Yijie Yu, Xiawu Zheng, Zikun Zhou, Wentao Zhang, Yu Wang, Wenming Yang_ <br>
 [[paper]](https://openreview.net/pdf?id=eejhD9FCP3) [[code]](https://openreview.net/forum?id=eejhD9FCP3) <br>
 
 ![Static Badge](https://img.shields.io/badge/IJCAI%202024-CCF%20A-red)
@@ -83,17 +83,17 @@ _Quanmin Liang*, **Zhilin Huang***, Xiawu Zheng, Feidiao Yang, Jun Peng, Kai Hua
 
 ![Static Badge](https://img.shields.io/badge/CVPR%202024-CCF%20A-red)
 **Bilateral Event Mining and Complementary for Event Stream Super-Resolution (Oral)** <br>
-_**Zhilin Huang***, Quanmin Liang*, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_ <br>
+_**Zhilin Huang**, Quanmin Liang, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_ <br>
 [[paper]](http://arxiv.org/abs/2405.10037) [[code]](https://github.com/Lqm26/BMCNet-ESR) <br>
 
 ![Static Badge](https://img.shields.io/badge/ICLR%202024-CCF%20NULL-red)
 **Protein-Ligand Interaction Prior for Binding-aware 3D Molecule Diffusion Models** <br>
-_**Zhilin Huang***, Ling Yang*, Xiangxin Zhou, Zhilong Zhang, Wentao Zhang, Xiawu Zheng, Jie Chen, Yu Wang, Bin Cui, Wenming Yang_ <br>
+_**Zhilin Huang**, Ling Yang, Xiangxin Zhou, Zhilong Zhang, Wentao Zhang, Xiawu Zheng, Jie Chen, Yu Wang, Bin Cui, Wenming Yang_ <br>
 [[paper]](https://openreview.net/forum?id=qH9nrMNTIW) [[code]](https://github.com/YangLing0818/IPDiff) <br>
 
 ![Static Badge](https://img.shields.io/badge/AAAI%202024-CCF%20A-red)
 **Binding-Adaptive Diffusion Models for Structure-Based Drug Design** <br>
-_**Zhilin Huang***, Ling Yang*, Zaixi Zhang, Xiangxin Zhou, Yu Bao, Xiawu Zheng, Yuwei Yang, Yu Wang, Wenming Yang_ <br>
+_**Zhilin Huang**, Ling Yang, Zaixi Zhang, Xiangxin Zhou, Yu Bao, Xiawu Zheng, Yuwei Yang, Yu Wang, Wenming Yang_ <br>
 [[paper]](https://arxiv.org/abs/2402.18583) [[code]](https://github.com/YangLing0818/BindDM) <br>
 
 ![Static Badge](https://img.shields.io/badge/arXiv%202022-2211.11138-red)
@@ -113,7 +113,7 @@ _**Zhilin Huang**, Chujun Qin, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
 
 ![Static Badge](https://img.shields.io/badge/ICASSP%202021-CCF%20B-red)
 **Semantic-aware Context Aggregation for Image Inpainting** <br>
-_**Zhilin Huang***, Chujun Qin*, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
+_**Zhilin Huang**, Chujun Qin, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
 [[paper]](https://ieeexplore.ieee.org/abstract/document/9414065) <br>
 
 ![Static Badge](https://img.shields.io/badge/MMM%202021-CCF%20C-red)
