@@ -63,90 +63,49 @@ Self-supervised Learning, Multi-modal Learning
 
 ****
 
-📝 Papers
+📝 Main Papers
 ======
 
 **First author or \*Equal contribution:**
 
 ![Static Badge](https://img.shields.io/badge/ACM%20MM%202025-CCF%20A-red)
 **Enhanced Motion-aware Latent Diffusion Models for Video Frame Interpolation** <br>
-_**Zhilin Huang**, Chujun Qin, Yifei Xing, Wenming Yang_ <br>
+_**Z Huang**, C Qin, Y Xing, W Yang_ <br>
 
 ![Static Badge](https://img.shields.io/badge/ACM%20MM%202024-CCF%20A-red)
 **Motion-aware Latent Diffusion Models for Video Frame Interpolation** <br>
-_**Zhilin Huang**, Yijie Yu, Ling Yang, Chujun Qin, Bing Zheng, Xiawu Zheng, Zikun Zhou, Yaowei Wang, Wenming Yang_ <br>
+_**Z Huang**, Y Yu, L Yang, C Qin, B Zheng, X Zheng, Z Zhou, Y Wang, W Yang_ <br>
 [[paper]](https://arxiv.org/abs/2404.13534) <br>
 
 ![Static Badge](https://img.shields.io/badge/ICML%202024-CCF%20A-red)
 **Interaction-based Retrieval-augmented Diffusion Models for Protein-specific 3D Molecule Generation** <br>
-_**Zhilin Huang**, Ling Yang, Xiangxin Zhou, Chujun Qin, Yijie Yu, Xiawu Zheng, Zikun Zhou, Wentao Zhang, Yu Wang, Wenming Yang_ <br>
+_**Z Huang**, L Yang, X Zhou, C Qin, Y Yu, X Zheng, Z Zhou, W Zhang, Y Wang, W Yang_ <br>
 [[paper]](https://openreview.net/pdf?id=eejhD9FCP3) [[code]](https://openreview.net/forum?id=eejhD9FCP3) <br>
 
 ![Static Badge](https://img.shields.io/badge/IJCAI%202024-CCF%20A-red)
 **Efficient Event Stream Super-Resolution with Recursive Multi-Branch Fusion** <br>
-_Quanmin Liang*, **Zhilin Huang***, Xiawu Zheng, Feidiao Yang, Jun Peng, Kai Huang, Yonghong Tian_ <br>
+_Q Liang*, **Z Huang***, X Zheng, F Yang, J Peng, K Huang, Y Tian_ <br>
 [[paper]](https://www.ijcai.org/proceedings/2024/0119.pdf) [[code]](https://github.com/Lqm26/RMFNet) <br>
 
 ![Static Badge](https://img.shields.io/badge/CVPR%202024-CCF%20A-red)
 **Bilateral Event Mining and Complementary for Event Stream Super-Resolution (Oral)** <br>
-_**Zhilin Huang**, Quanmin Liang, Yijie Yu, Chujun Qin, Xiawu Zheng, Kai Huang, Zikun Zhou, Wenming Yang_ <br>
+_**Z Huang**, Q Liang, Y Yu, C Qin, X Zheng, K Huang, Z Zhou, W Yang_ <br>
 [[paper]](http://arxiv.org/abs/2405.10037) [[code]](https://github.com/Lqm26/BMCNet-ESR) <br>
 
 ![Static Badge](https://img.shields.io/badge/ICLR%202024-CCF%20NULL-red)
 **Protein-Ligand Interaction Prior for Binding-aware 3D Molecule Diffusion Models** <br>
-_**Zhilin Huang**, Ling Yang, Xiangxin Zhou, Zhilong Zhang, Wentao Zhang, Xiawu Zheng, Jie Chen, Yu Wang, Bin Cui, Wenming Yang_ <br>
+_**Z Huang**, L Yang, X Zhou, Z Zhang, W Zhang, X Zheng, J Chen, Y Wang, B Cui, W Yang_ <br>
 [[paper]](https://openreview.net/forum?id=qH9nrMNTIW) [[code]](https://github.com/YangLing0818/IPDiff) <br>
 
 ![Static Badge](https://img.shields.io/badge/AAAI%202024-CCF%20A-red)
 **Binding-Adaptive Diffusion Models for Structure-Based Drug Design** <br>
-_**Zhilin Huang**, Ling Yang, Zaixi Zhang, Xiangxin Zhou, Yu Bao, Xiawu Zheng, Yuwei Yang, Yu Wang, Wenming Yang_ <br>
+_**Z Huang**, L Yang, Z Zhang, X Zhou, Y Bao, X Zheng, Y Yang, Y Wang, W Yang_ <br>
 [[paper]](https://arxiv.org/abs/2402.18583) [[code]](https://github.com/YangLing0818/BindDM) <br>
 
 ![Static Badge](https://img.shields.io/badge/arXiv%202022-2211.11138-red)
 **Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
-_Ling Yang*, **Zhilin Huang***, Yang Song, Shenda Hong, Guohao Li, Wentao Zhang, Bin Cui, Bernard Ghanem, Ming-Hsuan Yang_ <br>
+_L Yang*, **Z Huang***, Y Song, S Hong, G Li, W Zhang, B Cui, B Ghanem, M Yang_ <br>
 [[paper]](https://arxiv.org/abs/2211.11138) [[code]](https://github.com/YangLing0818/SGDiff) <br>
-
-![Static Badge](https://img.shields.io/badge/arXiv%202022-2204.01004-red)
-**Region-aware Attention for Image Inpainting** <br>
-_**Zhilin Huang**, Chujun Qin, Zhenyu Weng, Yuesheng Zhu_ <br>
-[[paper]](https://arxiv.org/abs/2204.01004) <br>
-
-![Static Badge](https://img.shields.io/badge/arXiv%202021-2111.03414-red)
-**Structure-aware Image Inpainting with Two Parallel Streams** <br>
-_**Zhilin Huang**, Chujun Qin, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
-[[paper]](https://arxiv.org/abs/2111.03414) <br>
-
-![Static Badge](https://img.shields.io/badge/ICASSP%202021-CCF%20B-red)
-**Semantic-aware Context Aggregation for Image Inpainting** <br>
-_**Zhilin Huang**, Chujun Qin, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
-[[paper]](https://ieeexplore.ieee.org/abstract/document/9414065) <br>
-
-![Static Badge](https://img.shields.io/badge/MMM%202021-CCF%20C-red)
-**Confidence-based Global Attention Guided Network for Image Inpainting** <br>
-_**Zhilin Huang**, Chujun Qin, Lei Li, Ruixin Liu, Yuesheng Zhu_ <br>
-[[paper]](https://link.springer.com/chapter/10.1007/978-3-030-67832-6_17) <br>
-
-**Other collaborations:**
-
-![Static Badge](https://img.shields.io/badge/TKDE%202024-CCF%20A-red)
-**Graphusion: Latent Diffusion for Graph Generation** <br>
-_Ling Yang, **Zhilin Huang**, Zhilong Zhang, Zhongyi Liu, Shenda Hong, Wentao Zhang, Wenming Yang, Bin Cui, Luxia Zhang_ <br>
-
-![Static Badge](https://img.shields.io/badge/NIPS%202023-CCF%20A-red)
-**Improving diffusion-based image synthesis with context prediction** <br>
-_Ling Yang, Jingwei Liu, Shenda Hong, Zhilong Zhang, **Zhilin Huang**, Zheming Cai, Wentao Zhang, Bin Cui_ <br>
-[[paper]](https://proceedings.neurips.cc/paper_files/paper/2023/hash/7664a7e946a84ac5e97649a967717cf2-Abstract-Conference.html) <br>
-
-![Static Badge](https://img.shields.io/badge/TKDE%202023-CCF%20A-red)
-**Individual and Structural Graph Information Bottlenecks for Out-of-Distribution Generalization** <br>
-_Ling Yang, Jiayi Zheng, Heyuan Wang, Zhongyi Liu, **Zhilin Huang**, Shenda Hong, Wentao Zhang, Bin Cui_ <br>
-[[paper]](https://ieeexplore.ieee.org/abstract/document/10168296) <br>
-
-![Static Badge](https://img.shields.io/badge/IJCNN%202021-CCF%20C-red)
-**Bi-encoder Network with Structure-texture Consistency for Image Inpainting** <br>
-_Chujun Qin, **Zhilin Huang**, Ruixin Liu, Zhenyu Weng, Yuesheng Zhu_ <br>
-[[paper]](https://ieeexplore.ieee.org/abstract/document/9534475)
 
 ****
 
