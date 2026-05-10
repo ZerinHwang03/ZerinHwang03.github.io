@@ -47,6 +47,8 @@ Self-supervised Learning, Multi-modal Learning
 🔥 News
 ======
 
+- 04/2026, **1** paper is accepted by **BioInformatics**
+
 - 07/2025, **1** paper is accepted by **ACM MM 2025**
 
 - 07/2024, **1** paper is accepted by **ACM MM 2024**
@@ -67,6 +69,10 @@ Self-supervised Learning, Multi-modal Learning
 ======
 
 **First author or \*Equal contribution:**
+
+![Static Badge](https://img.shields.io/badge/BioInformatics-CCF%20A-red)
+**Disentangled Diffusion Model for 3D Molecular Generation with Protein-Ligand Interaction Priors** <br>
+_**Z Huang**, L Yang, C Qin, Y Xing, H Yu, X Zhou, B Zheng, Y Wang, X Gao, W Yang_ <br>
 
 ![Static Badge](https://img.shields.io/badge/ACM%20MM%202025-CCF%20A-red)
 **Enhanced Motion-aware Latent Diffusion Models for Video Frame Interpolation** <br>
