@@ -10,22 +10,20 @@ redirect_from:
 
 🧑‍🎓 Biography
 ======
-I am currently a Ph.D. student in Shenzhen International Graduate School, Tsinghua University. I received my B.S. in the School of Electronics and Information Engineering, Harbin Institute of Technology in 2019. I received my M.S. in the School of Electronic and Computer Engineering, Peking University in 2022. My research interests encompass Computer Vision, Embodied AI, AI for Science and Self-supervised Learning.
+I received my Ph.D. degree in Information and Communication Engineering from Tsinghua University in 2026, my M.S. degree in Computer Application Technology from Peking University in 2022, and my B.S. degree in Communication Engineering from Harbin Institute of Technology in 2019. I will soon join the Power Dispatch and Control Center of China Southern Power Grid. My research interests include AI for science, computer vision and self-supervised learning.
 
 ****
 
-
-
 🔭 Research Interests
 ======
-Computer Vision, Embodied AI, AI for Science, Self-supervised Learning
+AI for Science, Self-supervised Learning, Computer Vision
 
 ****
 
 🎓 Education
 ======
 **Ph.D student**, **Tsinghua University**<br>
-Information and Communication Engineering, _2022.09 - present_
+Information and Communication Engineering, _2022.09 - 2026.07_
 
 **M.S.**, **Peking University** <br>
 Computer Application Technology, _2019.09 - 2022.07_ 
@@ -38,30 +36,17 @@ Communication Engineering, _2015.09 - 2019.07_
 💼 Research Experience
 ======
 
-**Research Intern**, **AI-Lab, ByteDance**, **Beijing** <br>
+**Research Intern**, **Qwen Business Unit of Alibaba, Alibaba** <br>
+_2025.12 - 2026.07_<br>
+Large Reasoning Model
+
+**Research Intern**, **AIG Group, AMD** <br>
+_2024.07 - 2025.01_<br>
+Video Editing
+
+**Research Intern**, **AI-Lab, ByteDance** <br>
 _2021.04 - 2021.11_<br>
 Self-supervised Learning, Multi-modal Learning
-
-****
-
-🔥 News
-======
-
-- 04/2026, **1** paper is accepted by **BioInformatics**
-
-- 07/2025, **1** paper is accepted by **ACM MM 2025**
-
-- 07/2024, **1** paper is accepted by **ACM MM 2024**
-
-- 05/2024, **1** paper is accepted by **ICML 2024**
-
-- 04/2024, **1** paper is accepted by **IJCAI 2024**
-
-- 02/2024, **1** paper is accepted by **CVPR 2024 (Oral)**
-
-- 01/2024, **1** paper is accepted by **ICLR 2024**
-
-- 12/2023, **1** paper is accepted by **AAAI 2024**
 
 ****
 
