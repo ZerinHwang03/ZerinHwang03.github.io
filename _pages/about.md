@@ -22,7 +22,7 @@ AI for Science, Self-supervised Learning, Computer Vision
 
 🎓 Education
 ======
-**Ph.D student**, **Tsinghua University**<br>
+**Ph.D**, **Tsinghua University**<br>
 Information and Communication Engineering, _2022.09 - 2026.07_
 
 **M.S.**, **Peking University** <br>
