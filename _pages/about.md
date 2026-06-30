@@ -36,7 +36,7 @@ Communication Engineering, _2015.09 - 2019.07_
 💼 Research Experience
 ======
 
-**Research Intern**, **Qwen Business Unit of Alibaba, Alibaba** <br>
+**Research Intern**, **Qwen Business Unit, Alibaba** <br>
 _2025.12 - 2026.07_<br>
 Large Reasoning Model
 
@@ -47,6 +47,21 @@ Video Editing
 **Research Intern**, **AI-Lab, ByteDance** <br>
 _2021.04 - 2021.11_<br>
 Self-supervised Learning, Multi-modal Learning
+
+****
+
+🏆 Honors and Awards
+======
+
+**National Scholarship** for Doctoral Students (National Award)
+
+Tsinghua University Graduate with Merit
+
+Tsinghua University Merit Student 
+
+Tsinghua University Comprehensive Scholarship
+
+Peking University Outstanding Research Award
 
 ****
 
@@ -102,7 +117,7 @@ _L Yang*, **Z Huang***, Y Song, S Hong, G Li, W Zhang, B Cui, B Ghanem, M Yang_ 
 
 📮 Contact Me
 ======
-- **Email**: zerinhwang03@pku.edu.cn
+- **Email**: zerinhwang03 [at] pku [dot] edu [dot] cn
 - **WeChat**: zerinhwang03
 
 
