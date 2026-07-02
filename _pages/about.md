@@ -10,13 +10,7 @@ redirect_from:
 
 🧑‍🎓 Biography
 ======
-I received my Ph.D. degree in Information and Communication Engineering from Tsinghua University in 2026, my M.S. degree in Computer Application Technology from Peking University in 2022, and my B.S. degree in Communication Engineering from Harbin Institute of Technology in 2019. I will soon join the Power Dispatch and Control Center of China Southern Power Grid. My research interests include AI for science, computer vision and self-supervised learning.
-
-****
-
-🔭 Research Interests
-======
-AI for Science, Self-supervised Learning, Computer Vision
+I received my Ph.D. degree in Information and Communication Engineering from Tsinghua University in 2026, my M.S. degree in Computer Application Technology from Peking University in 2022, and my B.S. degree in Communication Engineering from Harbin Institute of Technology in 2019. I will soon join the Power Dispatch and Control Center of China Southern Power Grid. My research interests include AI for Science, Computer Vision and Self-supervised Learning.
 
 ****
 
@@ -53,15 +47,11 @@ Self-supervised Learning, Multi-modal Learning
 🏆 Honors and Awards
 ======
 
-**National Scholarship** for Doctoral Students (National Award)
-
-Tsinghua University Graduate with Merit
-
-Tsinghua University Merit Student 
-
-Tsinghua University Comprehensive Scholarship
-
-Peking University Outstanding Research Award
+- **National Scholarship** for Doctoral Students (National Award)
+- Tsinghua University Graduate with Merit
+- Tsinghua University Merit Student 
+- Tsinghua University Comprehensive Scholarship
+- Peking University Outstanding Research Award
 
 ****
 
