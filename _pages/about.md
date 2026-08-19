@@ -78,17 +78,12 @@ _**Z Huang**, Y Yu, L Yang, C Qin, B Zheng, X Zheng, Z Zhou, Y Wang, W Yang_ <br
 _**Z Huang**, L Yang, X Zhou, C Qin, Y Yu, X Zheng, Z Zhou, W Zhang, Y Wang, W Yang_ <br>
 [[paper]](https://openreview.net/pdf?id=eejhD9FCP3) [[code]](https://openreview.net/forum?id=eejhD9FCP3) <br>
 
-![Static Badge](https://img.shields.io/badge/IJCAI%202024-CCF%20A-red)
-**Efficient Event Stream Super-Resolution with Recursive Multi-Branch Fusion** <br>
-_Q Liang*, **Z Huang***, X Zheng, F Yang, J Peng, K Huang, Y Tian_ <br>
-[[paper]](https://www.ijcai.org/proceedings/2024/0119.pdf) [[code]](https://github.com/Lqm26/RMFNet) <br>
-
 ![Static Badge](https://img.shields.io/badge/CVPR%202024-CCF%20A-red)
 **Bilateral Event Mining and Complementary for Event Stream Super-Resolution (Oral)** <br>
 _**Z Huang**, Q Liang, Y Yu, C Qin, X Zheng, K Huang, Z Zhou, W Yang_ <br>
 [[paper]](http://arxiv.org/abs/2405.10037) [[code]](https://github.com/Lqm26/BMCNet-ESR) <br>
 
-![Static Badge](https://img.shields.io/badge/ICLR%202024-CCF%20NULL-red)
+![Static Badge](https://img.shields.io/badge/ICLR%202024-CCF%20A-red)
 **Protein-Ligand Interaction Prior for Binding-aware 3D Molecule Diffusion Models** <br>
 _**Z Huang**, L Yang, X Zhou, Z Zhang, W Zhang, X Zheng, J Chen, Y Wang, B Cui, W Yang_ <br>
 [[paper]](https://openreview.net/forum?id=qH9nrMNTIW) [[code]](https://github.com/YangLing0818/IPDiff) <br>
@@ -113,9 +108,14 @@ _**Z Huang**, H Gao, Z Dong, Y Chen, Y Luo, C Qin, J Wang, Y Yang, G Jiang_ <br>
 _**Z Huang**, Y Liu, C Qin, Z Wang, D Zhou, D Li, E Barsoum_ <br>
 [[paper]](https://arxiv.org/abs/2501.04325) <br>
 
+![Static Badge](https://img.shields.io/badge/IJCAI%202024-CCF%20B-red)
+**Efficient Event Stream Super-Resolution with Recursive Multi-Branch Fusion** <br>
+_Q Liang*, **Z Huang***, X Zheng, F Yang, J Peng, K Huang, Y Tian_ <br>
+[[paper]](https://www.ijcai.org/proceedings/2024/0119.pdf) [[code]](https://github.com/Lqm26/RMFNet) <br>
+
 ![Static Badge](https://img.shields.io/badge/arXiv%202022-2211.11138-red)
 **Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
-_L Yang*, **Z Huang**, Y Song, S Hong, G Li, W Zhang, B Cui, B Ghanem, M Yang_ <br>
+_L Yang*, **Z Huang***, Y Song, S Hong, G Li, W Zhang, B Cui, B Ghanem, M Yang_ <br>
 [[paper]](https://arxiv.org/abs/2211.11138) [[code]](https://github.com/YangLing0818/SGDiff) <br>
 
 ****
