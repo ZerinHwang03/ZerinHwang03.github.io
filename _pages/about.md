@@ -16,7 +16,7 @@ I received my Ph.D. degree in Information and Communication Engineering from Tsi
 
 🎓 Education
 ======
-**Ph.D**, **Tsinghua University**<br>
+**Ph.D.**, **Tsinghua University**<br>
 Information and Communication Engineering, _2022.09 - 2026.07_
 
 **M.S.**, **Peking University** <br>
