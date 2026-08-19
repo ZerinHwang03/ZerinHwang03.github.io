@@ -93,17 +93,17 @@ _**Z Huang**, L Yang, X Zhou, Z Zhang, W Zhang, X Zheng, J Chen, Y Wang, B Cui, 
 _**Z Huang**, L Yang, Z Zhang, X Zhou, Y Bao, X Zheng, Y Yang, Y Wang, W Yang_ <br>
 [[paper]](https://arxiv.org/abs/2402.18583) [[code]](https://github.com/YangLing0818/BindDM) <br>
 
-![Static Badge](https://img.shields.io/badge/arXiv%202607.22788-red)
+![Static Badge](https://img.shields.io/badge/arXiv-2607.22788-red)
 **FMOPF: Latent Flow Matching with Constraint-Aware Interaction Priors for AC Optimal Power Flow** <br> 
 _**Z Huang**_ <br>
 [[paper]](https://arxiv.org/abs/2607.22788) <br>
 
-![Static Badge](https://img.shields.io/badge/arXiv%202606.18844-red)
+![Static Badge](https://img.shields.io/badge/arXiv-2606.18844-red)
 **Learning from Your Own Mistakes: Constructing Learnable Micro-Reflective Trajectories for Self-Distillation** <br> 
 _**Z Huang**, H Gao, Z Dong, Y Chen, Y Luo, C Qin, J Wang, Y Yang, G Jiang_ <br>
 [[paper]](https://arxiv.org/abs/2606.18844) <br>
 
-![Static Badge](https://img.shields.io/badge/arXiv%202501.04325-red)
+![Static Badge](https://img.shields.io/badge/arXiv-2501.04325-red)
 **Edit as You See: Image-guided Video Editing via Masked Motion Modeling** <br> 
 _**Z Huang**, Y Liu, C Qin, Z Wang, D Zhou, D Li, E Barsoum_ <br>
 [[paper]](https://arxiv.org/abs/2501.04325) <br>
@@ -113,7 +113,7 @@ _**Z Huang**, Y Liu, C Qin, Z Wang, D Zhou, D Li, E Barsoum_ <br>
 _Q Liang*, **Z Huang***, X Zheng, F Yang, J Peng, K Huang, Y Tian_ <br>
 [[paper]](https://www.ijcai.org/proceedings/2024/0119.pdf) [[code]](https://github.com/Lqm26/RMFNet) <br>
 
-![Static Badge](https://img.shields.io/badge/arXiv%202022-2211.11138-red)
+![Static Badge](https://img.shields.io/badge/arXiv-2211.11138-red)
 **Diffusion-Based Scene Graph to Image Generation with Masked Contrastive Pre-Training** <br> 
 _L Yang*, **Z Huang***, Y Song, S Hong, G Li, W Zhang, B Cui, B Ghanem, M Yang_ <br>
 [[paper]](https://arxiv.org/abs/2211.11138) [[code]](https://github.com/YangLing0818/SGDiff) <br>
